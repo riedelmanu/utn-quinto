@@ -1,0 +1,10 @@
+{
+  "userIgnoreFilters": [
+    "CIENCIA DE DATOS/ciencia-de-datos/.venv/",
+    "CIENCIA DE DATOS/ciencia-de-datos/data/"
+  ],
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true
+}

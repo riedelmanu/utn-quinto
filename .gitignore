@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Obsidian: estado local de cada computadora
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/

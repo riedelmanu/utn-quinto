@@ -1,0 +1,15 @@
+---
+tipo: indice
+---
+# UTN — Inicio
+
+## Materias
+- [[CIENCIA DE DATOS]]
+- [[GESTION AVANZADA DE DATOS]]
+- [[GESTION GERENCIAL]]
+- [[INVESTIGACION OPERATIVA]]
+- [[METODOLOGIA DE LA INVESTIGACION]]
+- [[PROYECTO FINAL]]
+
+## Pendientes
+- [ ] 

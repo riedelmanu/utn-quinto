@@ -1,0 +1,3 @@
+[submodule "CIENCIA DE DATOS/ciencia-de-datos"]
+	path = CIENCIA DE DATOS/ciencia-de-datos
+	url = https://github.com/riedelmanu/ciencia-de-datos.git
