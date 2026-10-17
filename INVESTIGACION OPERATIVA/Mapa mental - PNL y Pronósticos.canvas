@@ -1,0 +1,960 @@
+{
+	"nodes": [
+		{
+			"id": "n1",
+			"type": "text",
+			"text": "# 2° Parcial\n**Investigación Operativa**\nPNL y Pronósticos",
+			"x": -160,
+			"y": -75,
+			"width": 320,
+			"height": 150,
+			"color": "6"
+		},
+		{
+			"id": "n2",
+			"type": "text",
+			"text": "### Fundamentos\n[[Resumen Segundo Parcial - PNL y Pronósticos#1. PNL vs PL|→ ver en el resumen]]",
+			"x": -1150,
+			"y": -2103,
+			"width": 300,
+			"height": 128,
+			"color": "5"
+		},
+		{
+			"id": "n3",
+			"type": "text",
+			"text": "**PNL vs PL** ⭐\n- Se relajan **proporcionalidad** y **aditividad** (divisibilidad y certeza siguen)\n- El óptimo puede estar en un vértice, en un borde o en el **interior**\n- La región factible puede **no ser convexa**\n- Un óptimo local puede **no ser global**",
+			"x": -1700,
+			"y": -2256,
+			"width": 400,
+			"height": 232
+		},
+		{
+			"id": "n4",
+			"type": "text",
+			"text": "**Tipos de problemas**\nNo restringida · restringida linealmente · cuadrática · **convexa** · separable · no convexa · geométrica · fraccional",
+			"x": -1700,
+			"y": -2000,
+			"width": 400,
+			"height": 178
+		},
+		{
+			"id": "n5",
+			"type": "text",
+			"text": "### Convexidad y concavidad\n[[Resumen Segundo Parcial - PNL y Pronósticos#2. Convexidad y concavidad|→ ver en el resumen]]",
+			"x": -1150,
+			"y": -1520,
+			"width": 300,
+			"height": 128,
+			"color": "5"
+		},
+		{
+			"id": "n6",
+			"type": "text",
+			"text": "**1 variable**\n- $f'' \\ge 0$ → convexa ∪\n- $f'' \\le 0$ → cóncava ∩\n- Lineal → las dos a la vez",
+			"x": -1700,
+			"y": -1752,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n7",
+			"type": "text",
+			"text": "**n variables (Hessiana)**\n- Convexa: menores principales $\\ge 0$\n- Cóncava: menor de orden $k$ con signo $(-1)^k$\n- Estricta: dominantes $>0$ (convexa) o alternando $-,+,\\dots$ (cóncava)",
+			"x": -1700,
+			"y": -1572,
+			"width": 400,
+			"height": 207
+		},
+		{
+			"id": "n8",
+			"type": "text",
+			"text": "**Teorema clave** ⭐\nMáx $f$ cóncava (o mín convexa) sobre región convexa ⇒ **óptimo local = global**.\nLINGO no lo asegura: hay que verificar convexidad",
+			"x": -1700,
+			"y": -1341,
+			"width": 400,
+			"height": 181
+		},
+		{
+			"id": "n9",
+			"type": "text",
+			"text": "### Una variable\n[[Resumen Segundo Parcial - PNL y Pronósticos#4. Una variable sin restricciones|→ ver en el resumen]]",
+			"x": -1150,
+			"y": -742,
+			"width": 300,
+			"height": 128,
+			"color": "5"
+		},
+		{
+			"id": "n10",
+			"type": "text",
+			"text": "**Método analítico** ⭐ — candidatos:\n- interiores con $f'(x)=0$ → signo de $f''$\n- donde $f'$ no existe → comparar con vecinos\n- **extremos $a$ y $b$** si está restringido → signo de $f'$\n- global: comparar $f$ en todos",
+			"x": -1700,
+			"y": -1090,
+			"width": 400,
+			"height": 207
+		},
+		{
+			"id": "n11",
+			"type": "text",
+			"text": "**Sección áurea** (directo, sin derivadas)\n- $f$ **unimodal** en $[a,b]$\n- $r = 0{,}618$: $x_1 = b - r(b-a)$, $x_2 = a + r(b-a)$\n- Máx: $f(x_1)<f(x_2)$ → $(x_1,b]$; si no → $[a,x_2)$\n- Reusa un punto por iteración\n- $k \\ge \\ln(\\varepsilon/(b-a))/\\ln r$",
+			"x": -1700,
+			"y": -859,
+			"width": 400,
+			"height": 258
+		},
+		{
+			"id": "n12",
+			"type": "text",
+			"text": "**Bisección**\nSigno de $f'$ en el punto medio; parte el intervalo a la mitad (lento)",
+			"x": -1700,
+			"y": -577,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n13",
+			"type": "text",
+			"text": "**Newton**\n$x_{k+1} = x_k - f'(x_k)/f''(x_k)$\nRápido; necesita $f'' \\ne 0$ y puede no converger",
+			"x": -1700,
+			"y": -423,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n14",
+			"type": "text",
+			"text": "### Varias variables sin restricciones\n[[Resumen Segundo Parcial - PNL y Pronósticos#5. Varias variables sin restricciones|→ ver en el resumen]]",
+			"x": -1150,
+			"y": 17,
+			"width": 300,
+			"height": 153,
+			"color": "5"
+		},
+		{
+			"id": "n15",
+			"type": "text",
+			"text": "**Condiciones analíticas**\n- 1er orden: $\\nabla f = 0$\n- 2° orden (menores de la Hessiana): todos $>0$ → mín; alternan $-,+,\\dots$ → máx; otro patrón → silla",
+			"x": -1700,
+			"y": -197,
+			"width": 400,
+			"height": 181
+		},
+		{
+			"id": "n16",
+			"type": "text",
+			"text": "**Gradiente / ascenso acelerado** ⭐\n1. $\\nabla f(x^k)$; parar si $\\lvert\\partial f/\\partial x_j\\rvert \\le \\varepsilon$\n2. $\\varphi(t) = f(x^k + t\\,\\nabla f)$\n3. $t^*$ maximiza $\\varphi$ (búsqueda en 1 variable)\n4. $x^{k+1} = x^k + t^*\\nabla f$ → zigzag\n\nPara mín: usar $-\\nabla f$",
+			"x": -1700,
+			"y": 8,
+			"width": 400,
+			"height": 222
+		},
+		{
+			"id": "n17",
+			"type": "text",
+			"text": "**Newton multivariable**\n$x^{k+1} = x^k - H^{-1}\\nabla f$\nSi $f$ es cuadrática, converge en 1 iteración",
+			"x": -1700,
+			"y": 254,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n18",
+			"type": "text",
+			"text": "### Igualdad: Lagrange\n[[Resumen Segundo Parcial - PNL y Pronósticos#6. Restricciones de igualdad (Lagrange)|→ ver en el resumen]]",
+			"x": -1150,
+			"y": 648,
+			"width": 300,
+			"height": 128,
+			"color": "5"
+		},
+		{
+			"id": "n19",
+			"type": "text",
+			"text": "**Lagrangiano**\n$L = f + \\sum \\lambda_i\\,(b_i - g_i)$\n- $\\partial L/\\partial x_j = 0$ y $\\partial L/\\partial \\lambda_i = 0$\n- $\\nabla f = \\sum \\lambda_i \\nabla g_i$",
+			"x": -1700,
+			"y": 454,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n20",
+			"type": "text",
+			"text": "**Hessiano orlado** (2° orden, n = 2)\nFilas: $(0, g_x, g_y)$, $(g_x, L_{xx}, L_{xy})$, $(g_y, L_{yx}, L_{yy})$\n$\\lvert\\bar H\\rvert > 0$ → máx · $\\lvert\\bar H\\rvert < 0$ → mín",
+			"x": -1700,
+			"y": 634,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n21",
+			"type": "text",
+			"text": "**λ = precio sombra** ⭐\n$\\lambda_i = \\partial z^*/\\partial b_i$: cuánto cambia el óptimo por una unidad más de recurso.\nEscribir $\\lambda(b-g)$, no $\\lambda(g-b)$",
+			"x": -1700,
+			"y": 814,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n22",
+			"type": "text",
+			"text": "### Desigualdad: KKT\n[[Resumen Segundo Parcial - PNL y Pronósticos#7. Restricciones de desigualdad (KKT)|→ ver en el resumen]]",
+			"x": -1150,
+			"y": 1356,
+			"width": 300,
+			"height": 128,
+			"color": "5"
+		},
+		{
+			"id": "n23",
+			"type": "text",
+			"text": "**Condiciones** (todo en forma $g_i \\le b_i$)\n- Máx: $\\partial f/\\partial x_j - \\sum\\lambda_i\\,\\partial g_i/\\partial x_j = 0$\n- Mín: lo mismo con $+$\n- $\\lambda_i\\,(b_i - g_i) = 0$, $\\lambda_i \\ge 0$, factibilidad",
+			"x": -1700,
+			"y": 1040,
+			"width": 400,
+			"height": 181
+		},
+		{
+			"id": "n24",
+			"type": "text",
+			"text": "**Holgura complementaria** ⭐\n- $\\lambda_i > 0$ ⇒ restricción **activa** (el punto está en el borde)\n- Restricción inactiva ⇒ $\\lambda_i = 0$",
+			"x": -1700,
+			"y": 1245,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n25",
+			"type": "text",
+			"text": "**Suficiencia**\n- Máx: $f$ cóncava y $g_i$ convexas\n- Mín: $f$ convexa y $g_i$ convexas\n\n⇒ todo punto KKT es óptimo global",
+			"x": -1700,
+			"y": 1425,
+			"width": 400,
+			"height": 171
+		},
+		{
+			"id": "n26",
+			"type": "text",
+			"text": "**Estrategia**\n1. Resolver sin restricciones\n2. Si viola alguna: suponerla activa → Lagrange; chequear $\\lambda \\ge 0$\n3. Si no sale: probar los casos",
+			"x": -1700,
+			"y": 1620,
+			"width": 400,
+			"height": 181
+		},
+		{
+			"id": "n27",
+			"type": "text",
+			"text": "### ⭐ 2° parcial 2025\n",
+			"x": -1150,
+			"y": 2005,
+			"width": 300,
+			"height": 117,
+			"color": "3"
+		},
+		{
+			"id": "n28",
+			"type": "text",
+			"text": "**Teoría tomada el 03/09/2025** ([[parcial2-consigna.pdf|consigna]])\n- *V/F: sección áurea y ascenso acelerado son intercambiables* → **F**: áurea es para 1 variable unimodal sin derivadas; el ascenso, para n variables con gradiente\n- *V/F: λ no tiene interpretación* → **F**: es el precio sombra\n- *V/F: $\\lambda_1 > \\lambda_2 > 0$ ⇒ punto interior* → **F**: las dos restricciones están activas, el punto está en el borde\n- Supuestos de PNL vs PL\n- 1er orden con restricciones: sumar los **extremos del intervalo**",
+			"x": -1700,
+			"y": 1871,
+			"width": 400,
+			"height": 385,
+			"color": "3"
+		},
+		{
+			"id": "n29",
+			"type": "text",
+			"text": "# PNL\nProgramación No Lineal\n[[Resumen Segundo Parcial - PNL y Pronósticos#Parte I — Programación No Lineal|→ ver en el resumen]]",
+			"x": -700,
+			"y": -65,
+			"width": 280,
+			"height": 130,
+			"color": "5"
+		},
+		{
+			"id": "n30",
+			"type": "text",
+			"text": "### Conceptos\n[[Resumen Segundo Parcial - PNL y Pronósticos#10. Conceptos|→ ver en el resumen]]",
+			"x": 850,
+			"y": -1602,
+			"width": 300,
+			"height": 128,
+			"color": "4"
+		},
+		{
+			"id": "n31",
+			"type": "text",
+			"text": "**Tipos de modelos**\n- Series de tiempo: solo el pasado de la variable\n- Causales: otras variables → regresión",
+			"x": 1300,
+			"y": -1809,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n32",
+			"type": "text",
+			"text": "**Componentes**\nNivel · tendencia · estacionalidad · error aleatorio (media 0)",
+			"x": 1300,
+			"y": -1629,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n33",
+			"type": "text",
+			"text": "**Cuatro modelos**\n- Nivel: $F_t = A$\n- Tendencia: $F_t = A + Bt$\n- Estacional: $F_t = A \\cdot S_k$\n- Estacional con tendencia: $F_t = (A+Bt)\\,S_k$",
+			"x": 1300,
+			"y": -1475,
+			"width": 400,
+			"height": 207
+		},
+		{
+			"id": "n34",
+			"type": "text",
+			"text": "### Medidas de rendimiento\n[[Resumen Segundo Parcial - PNL y Pronósticos#11. Medidas de rendimiento|→ ver en el resumen]]",
+			"x": 850,
+			"y": -1057,
+			"width": 300,
+			"height": 128,
+			"color": "4"
+		},
+		{
+			"id": "n35",
+			"type": "text",
+			"text": "$e_t = D_t - F_t$\n- **RMSE** $= \\sqrt{\\sum e_t^2/n}$\n- **MAE** $= \\sum \\lvert e_t\\rvert/n$\n- **MAPE** $= \\frac{100}{n}\\sum \\lvert e_t\\rvert/D_t$\n- **Sesgo** $= \\sum e_t/n$ ($>0$ subestima, $<0$ sobreestima)",
+			"x": 1300,
+			"y": -1198,
+			"width": 400,
+			"height": 229
+		},
+		{
+			"id": "n36",
+			"type": "text",
+			"text": "**Intervalo de confianza**\n$F_t \\pm z \\cdot \\text{RMSE}$\nz: 90 % → 1,645 · 95 % → 1,96 · 99 % → 2,576",
+			"x": 1300,
+			"y": -945,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n37",
+			"type": "text",
+			"text": "### Modelo de nivel\n[[Resumen Segundo Parcial - PNL y Pronósticos#12. Modelo de nivel|→ ver en el resumen]]",
+			"x": 850,
+			"y": -461,
+			"width": 300,
+			"height": 128,
+			"color": "4"
+		},
+		{
+			"id": "n38",
+			"type": "text",
+			"text": "**Promedio histórico**\nTodos los datos pesan igual → reacciona muy lento",
+			"x": 1300,
+			"y": -719,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n39",
+			"type": "text",
+			"text": "**Medias móviles (k)**\n$F_{t+1}$ = promedio de los últimos $k$\n- $k$ grande: suave pero lento\n- $k$ chico: reactivo pero ruidoso",
+			"x": 1300,
+			"y": -565,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n40",
+			"type": "text",
+			"text": "**Suavizado exponencial (α)**\n$F_t = F_{t-1} + \\alpha\\,(D_{t-1} - F_{t-1})$\n- Pesos que decaen exponencialmente\n- $\\alpha \\in [0{,}1;\\ 0{,}3]$, $F_1 = D_0$\n- Con tendencia se atrasa → Holt",
+			"x": 1300,
+			"y": -385,
+			"width": 400,
+			"height": 181
+		},
+		{
+			"id": "n41",
+			"type": "text",
+			"text": "**Elegir $k$ y α**: el de **menor RMSE**, comparando sobre los mismos períodos",
+			"x": 1300,
+			"y": -180,
+			"width": 400,
+			"height": 105
+		},
+		{
+			"id": "n42",
+			"type": "text",
+			"text": "### Regresión lineal\n[[Resumen Segundo Parcial - PNL y Pronósticos#13. Regresión lineal|→ ver en el resumen]]",
+			"x": 850,
+			"y": 200,
+			"width": 300,
+			"height": 128,
+			"color": "4"
+		},
+		{
+			"id": "n43",
+			"type": "text",
+			"text": "**Mínimos cuadrados**\n$\\hat\\beta_1 = \\dfrac{\\sum(x_i-\\bar x)(y_i-\\bar y)}{\\sum(x_i-\\bar x)^2}$\n$\\hat\\beta_0 = \\bar y - \\hat\\beta_1 \\bar x$\n(es un PNL sin restricciones)",
+			"x": 1300,
+			"y": -5,
+			"width": 400,
+			"height": 178
+		},
+		{
+			"id": "n44",
+			"type": "text",
+			"text": "**¿Es bueno el modelo?**\n- $R^2 = SSR/SST$\n- p-valores ($H_0: \\beta_j = 0$)\n- $s_e = \\sqrt{SSE/(n-k-1)}$",
+			"x": 1300,
+			"y": 197,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n45",
+			"type": "text",
+			"text": "**Supuestos**\nHomocedasticidad · normalidad · independencia (contar cambios de signo) · no multicolinealidad",
+			"x": 1300,
+			"y": 377,
+			"width": 400,
+			"height": 156
+		},
+		{
+			"id": "n46",
+			"type": "text",
+			"text": "### Holt: tendencia\n[[Resumen Segundo Parcial - PNL y Pronósticos#14. Holt (tendencia)|→ ver en el resumen]]",
+			"x": 850,
+			"y": 681,
+			"width": 300,
+			"height": 128,
+			"color": "4"
+		},
+		{
+			"id": "n47",
+			"type": "text",
+			"text": "$L_t = F_t + \\alpha\\,(D_t - F_t)$\n$B_t = B_{t-1} + \\beta\\,[(L_t - L_{t-1}) - B_{t-1}]$\n$F_{t+k} = L_t + k\\,B_t$",
+			"x": 1300,
+			"y": 603,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n48",
+			"type": "text",
+			"text": "**Inicio**\nRegresión con los primeros datos → $B$ = pendiente; $L$ = valor ajustado corregido con α",
+			"x": 1300,
+			"y": 757,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n49",
+			"type": "text",
+			"text": "### Winters: tendencia + estacionalidad\n[[Resumen Segundo Parcial - PNL y Pronósticos#15. Winters (tendencia y estacionalidad)|→ ver en el resumen]]",
+			"x": 850,
+			"y": 1168,
+			"width": 300,
+			"height": 153,
+			"color": "4"
+		},
+		{
+			"id": "n50",
+			"type": "text",
+			"text": "**Orden de actualización**\n1. $L_t = \\alpha\\frac{D_t}{s_{t-c}} + (1-\\alpha)(L_{t-1}+B_{t-1})$\n2. $B_t$: igual que en Holt\n3. $s_t = \\gamma\\frac{D_t}{L_t} + (1-\\gamma)\\,s_{t-c}$",
+			"x": 1300,
+			"y": 957,
+			"width": 400,
+			"height": 201
+		},
+		{
+			"id": "n51",
+			"type": "text",
+			"text": "**Pronóstico**\n$F_{t+k} = (L_t + k\\,B_t)\\,s_{t+k-c}$\n$c$ = 4 (trimestral) · 12 (mensual)",
+			"x": 1300,
+			"y": 1182,
+			"width": 400,
+			"height": 130
+		},
+		{
+			"id": "n52",
+			"type": "text",
+			"text": "**Inicio** (2 ciclos completos)\n- $B_0$ = (prom. año −1 − prom. año −2) / c\n- $L_0$ = prom. año −1 + (c/2)·$B_0$\n- $s$ = D del año −1 / prom. año −1\n\nTip de clase: α, β ≤ 0,5",
+			"x": 1300,
+			"y": 1336,
+			"width": 400,
+			"height": 196
+		},
+		{
+			"id": "n53",
+			"type": "text",
+			"text": "### Cómo elegir el modelo\n[[Resumen Segundo Parcial - PNL y Pronósticos#16. Cómo elegir el modelo|→ ver en el resumen]]",
+			"x": 850,
+			"y": 1641,
+			"width": 300,
+			"height": 128,
+			"color": "4"
+		},
+		{
+			"id": "n54",
+			"type": "text",
+			"text": "1. **Graficar**: ¿estable? ¿tendencia? ¿patrón cada $c$? ¿datos atípicos?\n2. Elegir el método\n3. Ajustar $k$, α, β, γ (mínimo RMSE, Solver)\n4. Validar (sesgo ≈ 0)\n5. Pronóstico $\\pm z \\cdot$ RMSE",
+			"x": 1300,
+			"y": 1602,
+			"width": 400,
+			"height": 207
+		},
+		{
+			"id": "n55",
+			"type": "text",
+			"text": "# Pronósticos\nModelos de pronóstico\n[[Resumen Segundo Parcial - PNL y Pronósticos#Parte II — Modelos de Pronósticos|→ ver en el resumen]]",
+			"x": 420,
+			"y": -65,
+			"width": 280,
+			"height": 130,
+			"color": "4"
+		},
+		{
+			"id": "n56",
+			"type": "text",
+			"text": "**Cómo leer el mapa**\n- Cada tema enlaza a su sección del [[Resumen Segundo Parcial - PNL y Pronósticos|resumen]]\n- ⭐ = tomado en el 2° parcial 2025\n- Fórmulas y ejemplos resueltos: en el resumen",
+			"x": -190,
+			"y": 135,
+			"width": 380,
+			"height": 170
+		}
+	],
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "n2",
+			"fromSide": "left",
+			"toNode": "n3",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e2",
+			"fromNode": "n2",
+			"fromSide": "left",
+			"toNode": "n4",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e3",
+			"fromNode": "n5",
+			"fromSide": "left",
+			"toNode": "n6",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e4",
+			"fromNode": "n5",
+			"fromSide": "left",
+			"toNode": "n7",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e5",
+			"fromNode": "n5",
+			"fromSide": "left",
+			"toNode": "n8",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e6",
+			"fromNode": "n9",
+			"fromSide": "left",
+			"toNode": "n10",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e7",
+			"fromNode": "n9",
+			"fromSide": "left",
+			"toNode": "n11",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e8",
+			"fromNode": "n9",
+			"fromSide": "left",
+			"toNode": "n12",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e9",
+			"fromNode": "n9",
+			"fromSide": "left",
+			"toNode": "n13",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e10",
+			"fromNode": "n14",
+			"fromSide": "left",
+			"toNode": "n15",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e11",
+			"fromNode": "n14",
+			"fromSide": "left",
+			"toNode": "n16",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e12",
+			"fromNode": "n14",
+			"fromSide": "left",
+			"toNode": "n17",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e13",
+			"fromNode": "n18",
+			"fromSide": "left",
+			"toNode": "n19",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e14",
+			"fromNode": "n18",
+			"fromSide": "left",
+			"toNode": "n20",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e15",
+			"fromNode": "n18",
+			"fromSide": "left",
+			"toNode": "n21",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e16",
+			"fromNode": "n22",
+			"fromSide": "left",
+			"toNode": "n23",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e17",
+			"fromNode": "n22",
+			"fromSide": "left",
+			"toNode": "n24",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e18",
+			"fromNode": "n22",
+			"fromSide": "left",
+			"toNode": "n25",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e19",
+			"fromNode": "n22",
+			"fromSide": "left",
+			"toNode": "n26",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e20",
+			"fromNode": "n27",
+			"fromSide": "left",
+			"toNode": "n28",
+			"toSide": "right",
+			"color": "3"
+		},
+		{
+			"id": "e21",
+			"fromNode": "n1",
+			"fromSide": "left",
+			"toNode": "n29",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e22",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n2",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e23",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n5",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e24",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n9",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e25",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n14",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e26",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n18",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e27",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n22",
+			"toSide": "right",
+			"color": "5"
+		},
+		{
+			"id": "e28",
+			"fromNode": "n29",
+			"fromSide": "left",
+			"toNode": "n27",
+			"toSide": "right",
+			"color": "3"
+		},
+		{
+			"id": "e29",
+			"fromNode": "n30",
+			"fromSide": "right",
+			"toNode": "n31",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e30",
+			"fromNode": "n30",
+			"fromSide": "right",
+			"toNode": "n32",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e31",
+			"fromNode": "n30",
+			"fromSide": "right",
+			"toNode": "n33",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e32",
+			"fromNode": "n34",
+			"fromSide": "right",
+			"toNode": "n35",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e33",
+			"fromNode": "n34",
+			"fromSide": "right",
+			"toNode": "n36",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e34",
+			"fromNode": "n37",
+			"fromSide": "right",
+			"toNode": "n38",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e35",
+			"fromNode": "n37",
+			"fromSide": "right",
+			"toNode": "n39",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e36",
+			"fromNode": "n37",
+			"fromSide": "right",
+			"toNode": "n40",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e37",
+			"fromNode": "n37",
+			"fromSide": "right",
+			"toNode": "n41",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e38",
+			"fromNode": "n42",
+			"fromSide": "right",
+			"toNode": "n43",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e39",
+			"fromNode": "n42",
+			"fromSide": "right",
+			"toNode": "n44",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e40",
+			"fromNode": "n42",
+			"fromSide": "right",
+			"toNode": "n45",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e41",
+			"fromNode": "n46",
+			"fromSide": "right",
+			"toNode": "n47",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e42",
+			"fromNode": "n46",
+			"fromSide": "right",
+			"toNode": "n48",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e43",
+			"fromNode": "n49",
+			"fromSide": "right",
+			"toNode": "n50",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e44",
+			"fromNode": "n49",
+			"fromSide": "right",
+			"toNode": "n51",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e45",
+			"fromNode": "n49",
+			"fromSide": "right",
+			"toNode": "n52",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e46",
+			"fromNode": "n53",
+			"fromSide": "right",
+			"toNode": "n54",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e47",
+			"fromNode": "n1",
+			"fromSide": "right",
+			"toNode": "n55",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e48",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n30",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e49",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n34",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e50",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n37",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e51",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n42",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e52",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n46",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e53",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n49",
+			"toSide": "left",
+			"color": "4"
+		},
+		{
+			"id": "e54",
+			"fromNode": "n55",
+			"fromSide": "right",
+			"toNode": "n53",
+			"toSide": "left",
+			"color": "4"
+		}
+	]
+}

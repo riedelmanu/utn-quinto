@@ -1,0 +1,39 @@
+MODEL:
+SETS:
+    NODOS /H1, H2, H3, M1, M2, M3, M4, FICTICIO/: b;
+    ARCOS /H1M1, H1M2, H1M3, H1M4, H1FICTICIO,
+           H2M1, H2M2, H2M3, H2M4, H2FICTICIO,
+           H3M1, H3M2, H3M3, H3M4, H3FICTICIO/: c, X;
+    INCIDENCIA(NODOS, ARCOS): MI;
+ENDSETS
+
+DATA:
+    ! Ofertas (+) y Demandas (-);
+    b = 200  300  500  -200  -100  -200  -400  -100;
+
+    ! Coeficientes de la FO (beneficios netos);
+    c = -0.5  1.3  4.5  0.7  0  -0.2  2.0  5.1  1.9  0  -2.0  1.6  4.9  0.5  0;
+
+    ! Matriz de incidencia (1=salida, -1=entrada);
+    MI = 
+         1   1   1   1   1    0   0   0   0   0    0   0   0   0   0  
+         0   0   0   0   0    1   1   1   1   1    0   0   0   0   0  
+         0   0   0   0   0    0   0   0   0   0    1   1   1   1   1  
+        -1   0   0   0   0   -1   0   0   0   0   -1   0   0   0   0 
+         0  -1   0   0   0    0  -1   0   0   0    0  -1   0   0   0 
+         0   0  -1   0   0    0   0  -1   0   0    0   0  -1   0   0  
+         0   0   0  -1   0    0   0   0  -1   0    0   0   0  -1   0  
+         0   0   0   0  -1    0   0   0   0  -1    0   0   0   0  -1;
+ENDDATA
+
+! Maximizar el beneficio neto;
+MAX = @SUM(ARCOS(j): c(j) * X(j));
+
+! Restricciones de flujo neto;
+@FOR(NODOS(i):
+    @SUM(ARCOS(j): MI(i,j) * X(j)) = b(i);
+);
+
+! Variables no negativas;
+@FOR(ARCOS(j): X(j) >= 0);
+END

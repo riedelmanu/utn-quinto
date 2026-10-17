@@ -8,3 +8,10 @@
 
 # Archivos temporales de Office (documento abierto)
 ~$*
+
+# Instaladores y accesos directos de Windows (el de LINGO pesa 102 MB y GitHub no acepta archivos > 100 MB)
+*.exe
+*.lnk
+
+# Repos git propios dentro del vault (no se suben acá; ver nota de IO)
+INVESTIGACION OPERATIVA/IO/tpi/

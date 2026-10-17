@@ -1,0 +1,46 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definir la función objetivo
+def f(x):
+    return -((x[0] - np.sqrt(5))**2 + (x[1] - np.pi)**2 + 10)
+
+# Gradiente de la función
+def grad_f(x):
+    return np.array([-2 * x[0] + 2 * np.sqrt(5), -2 * x[1] + 2 * np.pi])
+
+# Parámetros del método
+precision = 5e-2
+alpha = 0.1
+beta = 0.9
+x = np.array([0.0, 0.0])  # punto inicial
+v = np.array([0.0, 0.0])
+trajectory = [x.copy()]
+
+# Bucle iterativo del ascenso acelerado
+while np.linalg.norm(grad_f(x)) > precision:
+    v = beta * v + alpha * grad_f(x)
+    x += v
+    trajectory.append(x.copy())
+
+# Resultado final
+x_max = x
+z_max = f(x_max)
+print(f"Punto de máximo aproximado: x = {x_max}")
+print(f"Valor máximo aproximado: z = {z_max}")
+
+# Graficar la trayectoria
+trajectory = np.array(trajectory)
+X, Y = np.meshgrid(np.linspace(-10, 10, 400), np.linspace(-10, 10, 400))
+Z = -((X - np.sqrt(5))**2 + (Y - np.pi)**2 + 10)
+
+plt.figure(figsize=(8, 6))
+plt.contour(X, Y, Z, levels=50, cmap='viridis')
+plt.plot(trajectory[:, 0], trajectory[:, 1], 'r.-', label='Trayectoria')
+plt.scatter(x_max[0], x_max[1], color='red', label='Máximo Encontrado')
+plt.title("Ascenso Acelerado hacia el Máximo")
+plt.xlabel('$x_1$')
+plt.ylabel('$x_2$')
+plt.legend()
+plt.grid(True)
+plt.show()

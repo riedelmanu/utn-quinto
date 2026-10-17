@@ -9,6 +9,10 @@ Volver a [[Inicio]]
 
 ## Resúmenes
 - [[Resumen Segundo Parcial - PNL y Pronósticos]] — Programación No Lineal y Modelos de Pronósticos (temas del 2° parcial)
+- [[Mapa mental - PNL y Pronósticos.canvas|Mapa mental del 2° parcial]] — PNL y Pronósticos por temas, con enlaces al resumen
+
+## Exámenes anteriores
+- [[parcial2-consigna.pdf|2° parcial 03/09/2025 (consigna)]] · más material en la carpeta `IO/` (parciales, recuperatorio, finales, LINGO)
 
 ## Clases
 
