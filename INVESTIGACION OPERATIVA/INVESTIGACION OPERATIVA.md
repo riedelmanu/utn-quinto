@@ -17,6 +17,7 @@ Volver a [[Inicio]]
 ## Clases
 
 ## Trabajos prácticos
+- [[Pronósticos en Excel - Guía 4 paso a paso]] — cómo resolver la Guía 4 en Excel: con los botones de la pestaña Datos y con fórmulas
 - [[Guía_3-Programación_no_lineal.pdf|Guía 3 — Programación No Lineal]]
 - [[Guía_4-Modelos_de_pronósticos.pdf|Guía 4 — Modelos de Pronósticos]]
 
