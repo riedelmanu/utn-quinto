@@ -5,7 +5,7 @@ tags: [investigacion-operativa, pronosticos, excel, guia-4]
 ---
 # Pronósticos en Excel — Guía 4 paso a paso
 
-Volver a [[INVESTIGACION OPERATIVA]] · Teoría en [[Resumen Segundo Parcial - PNL y Pronósticos#Parte II — Modelos de Pronósticos|el resumen]] · Consigna: [[Guía_4-Modelos_de_pronósticos.pdf|Guía 4]] · Modelo de clase: [[Analítica Predictiva.xlsx]]
+Volver a [[Parcial 2]] · [[INVESTIGACION OPERATIVA]] · Teoría en [[Resumen Segundo Parcial - PNL y Pronósticos#Parte II — Modelos de Pronósticos|el resumen]] · Consigna: [[Guía_4-Modelos_de_pronósticos.pdf|Guía 4]] · Modelo de clase: [[Analítica Predictiva.xlsx]]
 
 > [!info] Antes de empezar
 > - **Separador de argumentos:** las fórmulas están escritas para Excel en español, con `;` y coma decimal (`0,1`). Si tu Excel usa `,` como separador, cambiá `;` por `,` y la coma decimal por punto.

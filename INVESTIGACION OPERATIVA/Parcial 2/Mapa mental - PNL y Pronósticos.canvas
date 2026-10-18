@@ -516,11 +516,11 @@
 		{
 			"id": "n56",
 			"type": "text",
-			"text": "**Cómo leer el mapa**\n- Cada tema enlaza a su sección del [[Resumen Segundo Parcial - PNL y Pronósticos|resumen]]\n- ⭐ = tomado en el 2° parcial 2025\n- Fórmulas y ejemplos resueltos: en el resumen",
+			"text": "**Cómo leer el mapa**\n- Cada tema enlaza a su sección del [[Resumen Segundo Parcial - PNL y Pronósticos|resumen]]\n- ⭐ = tomado en el 2° parcial 2025\n- Fórmulas y ejemplos resueltos: en el resumen\n- Para practicar: [[Preguntas tipo parcial - PNL y Pronósticos|preguntas tipo parcial]]",
 			"x": -190,
 			"y": 135,
 			"width": 380,
-			"height": 170
+			"height": 200
 		}
 	],
 	"edges": [

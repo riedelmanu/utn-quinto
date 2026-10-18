@@ -6,7 +6,7 @@ tags: [resumen, investigacion-operativa, pnl, pronosticos]
 ---
 # Resumen 2° parcial — PNL y Pronósticos
 
-Volver a [[INVESTIGACION OPERATIVA]] · [[Inicio]] · 🗺️ [[Mapa mental - PNL y Pronósticos.canvas|Mapa mental]]
+Volver a [[Parcial 2]] · [[INVESTIGACION OPERATIVA]] · [[Inicio]] · 🗺️ [[Mapa mental - PNL y Pronósticos.canvas|Mapa mental]]
 
 > [!info] Fuentes
 > - **Guías:** [[Guía_3-Programación_no_lineal.pdf|Guía 3 – PNL]] · [[Guía_4-Modelos_de_pronósticos.pdf|Guía 4 – Pronósticos]]

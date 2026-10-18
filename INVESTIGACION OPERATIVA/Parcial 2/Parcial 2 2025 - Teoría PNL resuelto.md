@@ -5,7 +5,7 @@ tags: [investigacion-operativa, pnl, parcial, examen-resuelto]
 ---
 # 2° parcial 2025 — Teoría de PNL (resuelto)
 
-Volver a [[INVESTIGACION OPERATIVA]] · Consigna original: [[parcial2-consigna.pdf|2° parcial del 03/09/2025]] · Teoría: [[Resumen Segundo Parcial - PNL y Pronósticos|resumen]] · [[Mapa mental - PNL y Pronósticos.canvas|mapa mental]]
+Volver a [[Parcial 2]] · [[INVESTIGACION OPERATIVA]] · Consigna original: [[parcial2-consigna.pdf|2° parcial del 03/09/2025]] · Teoría: [[Resumen Segundo Parcial - PNL y Pronósticos|resumen]] · [[Mapa mental - PNL y Pronósticos.canvas|mapa mental]]
 
 > [!info] Cómo está armado
 > Cada respuesta tiene primero la **respuesta para el parcial** (lo que escribirías en la hoja) y después un **desarrollo** para entender el porqué. Las respuestas son mías, no de la cátedra.

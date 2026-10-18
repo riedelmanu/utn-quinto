@@ -24,3 +24,7 @@ Esta carpeta es a la vez un vault de Obsidian y el espacio de trabajo de Claude 
 - Al empezar a trabajar: `git pull`. Después de crear o modificar notas/archivos: commit con mensaje descriptivo en español y `git push`.
 - `CIENCIA DE DATOS/ciencia-de-datos/` es un **submódulo** (repo compartido https://github.com/riedelmanu/ciencia-de-datos). Sus cambios se commitean y pushean dentro de esa carpeta; en el repo del vault solo se actualiza el puntero del submódulo.
 - Clonar en otra computadora: `git clone --recurse-submodules https://github.com/riedelmanu/utn-quinto`. Actualizar: `git pull --recurse-submodules`.
+
+## Investigación Operativa
+- Todo lo del 2° parcial (PNL y Pronósticos) va en `INVESTIGACION OPERATIVA/Parcial 2/`: notas en la raíz de esa carpeta, material de la cátedra en `Material de cátedra/`, libros y resúmenes de otros alumnos en `Libros y resúmenes/`. La nota índice es `Parcial 2.md`.
+- En preguntas de práctica, las respuestas van en callouts plegados (`> [!check]- Ver respuesta`).
