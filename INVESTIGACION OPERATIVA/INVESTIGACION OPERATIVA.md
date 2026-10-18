@@ -12,7 +12,7 @@ Volver a [[Inicio]]
 - [[Mapa mental - PNL y Pronósticos.canvas|Mapa mental del 2° parcial]] — PNL y Pronósticos por temas, con enlaces al resumen
 
 ## Exámenes anteriores
-- [[parcial2-consigna.pdf|2° parcial 03/09/2025 (consigna)]] · más material en la carpeta `IO/` (parciales, recuperatorio, finales, LINGO)
+- [[parcial2-consigna.pdf|2° parcial 03/09/2025 (consigna)]] → [[Parcial 2 2025 - Teoría PNL resuelto|resuelto]] · más material en la carpeta `IO/` (parciales, recuperatorio, finales, LINGO)
 
 ## Clases
 
