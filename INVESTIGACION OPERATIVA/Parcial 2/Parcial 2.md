@@ -10,6 +10,7 @@ Volver a [[INVESTIGACION OPERATIVA]] · [[Inicio]]
 ## Para estudiar
 1. [[Resumen Segundo Parcial - PNL y Pronósticos|Resumen]]: toda la teoría, con ejemplos resueltos y la checklist del parcial.
 2. [[Mapa mental - PNL y Pronósticos.canvas|Mapa mental]]: los temas importantes de un vistazo.
+   - [[Apunte rápido - Modelos de pronóstico|Apunte rápido de pronósticos]]: un gráfico por modelo para reconocerlo, con sus características.
 3. [[Preguntas tipo parcial - PNL y Pronósticos|Preguntas tipo parcial]]: V/F, desarrollo, integradoras, ejercicios cortos y simulacros, con las respuestas plegadas.
 4. [[Parcial 2 2025 - Teoría PNL resuelto|Parcial 2025 resuelto]]: el cuestionario real del año pasado.
 5. [[Pronósticos en Excel - Guía 4 paso a paso|Pronósticos en Excel]]: la Guía 4 por botones (pestaña Datos) y con fórmulas.
