@@ -29,8 +29,8 @@ Cubre las lecturas del práctico individual (13 y 19 de octubre): los cuatro tex
 ## 1. San Martín — tres anécdotas
 
 - **Cartas comprometedoras.** Tras la derrota de Cancha Rayada corrió el rumor de que San Martín y O'Higgins habían muerto. Muchos chilenos notables, asustados, le escribieron al general realista Osorio jurándole lealtad al rey y denunciando patriotas. Las cartas quedaron en la valija que Osorio abandonó al huir de Maipú. San Martín las leyó una por una a la sombra de unos álamos y, **sin revelar a nadie su contenido, las quemó**.
-- **La verdad de Chacabuco.** Tardó diez días en escribir el parte de batalla, que atribuye a O'Higgins una carga decisiva. Años después, en notas al margen de una memoria que lo desmerecía, contó lo que pasó: O'Higgins, «bravo hasta el extremo» pero con «conocimientos militares nulos», atacó antes de tiempo contra su orden expresa y desarmó el plan; San Martín salvó la batalla cargando con la caballería. Los diez días fueron para **ceder generosamente un mérito que no le correspondía** a O'Higgins.
-- **Instrucciones antes de Maipú** (6 puntos): 100 tiros y 6 piedras por soldado; ración de vino y arenga de los jefes, con pena de muerte a quien deje su fila; decir que toda retirada es una orden del general «por astucia»; salir 50 pasos al encuentro de una carga con arma blanca; no rescatar heridos durante la batalla (cuatro hombres por herido debilitan la línea); un pelotón en la retaguardia de la caballería para «sablear» a quien vuelva la cara, porque el soldado propio es «más propio para la ofensa que para la defensa».
+- **La verdad de Chacabuco.** Tardó diez días en escribir el parte de batalla, que atribuye a O'Higgins una carga decisiva. Años después, en notas al margen de una memoria que lo desmerecía, contó lo que pasó: O'Higgins, "bravo hasta el extremo" pero con "conocimientos militares nulos", atacó antes de tiempo contra su orden expresa y desarmó el plan; San Martín salvó la batalla cargando con la caballería. Los diez días fueron para **ceder generosamente un mérito que no le correspondía** a O'Higgins.
+- **Instrucciones antes de Maipú** (6 puntos): 100 tiros y 6 piedras por soldado; ración de vino y arenga de los jefes, con pena de muerte a quien deje su fila; decir que toda retirada es una orden del general "por astucia"; salir 50 pasos al encuentro de una carga con arma blanca; no rescatar heridos durante la batalla (cuatro hombres por herido debilitan la línea); un pelotón en la retaguardia de la caballería para "sablear" a quien vuelva la cara, porque el soldado propio es "más propio para la ofensa que para la defensa".
 
 > [!tip] Idea clave
 > Líder autocrático con tropa poco madura (R1) que **dice** qué hacer, pero con una integridad y una visión política que van más allá de la orden: discreción, magnanimidad y cuidado de la causa común.
@@ -39,18 +39,18 @@ Cubre las lecturas del práctico individual (13 y 19 de octubre): los cuatro tex
 
 Creador de la Mac y de los dispositivos Apple, fundador de Pixar, millonario a los 26 años; visionario de carácter controvertido. Hasta Bill Gates le reconocía el talento para generar empatía entre sus productos y la gente.
 
-1. **Eliminar distracciones, enfocarse.** Al volver a Apple en 1997, en plena crisis, dejó solo cuatro proyectos: «Hagamos cuatro cosas y hagámoslas espectacularmente bien».
-2. **Simplificar todo.** Optimizar recursos, quitar lo superfluo: «La sencillez es la máxima sofisticación».
+1. **Eliminar distracciones, enfocarse.** Al volver a Apple en 1997, en plena crisis, dejó solo cuatro proyectos: "Hagamos cuatro cosas y hagámoslas espectacularmente bien".
+2. **Simplificar todo.** Optimizar recursos, quitar lo superfluo: "La sencillez es la máxima sofisticación".
 3. **Hacerse responsable** de todo el proceso; por eso los productos Apple son poco compatibles con otras marcas.
 4. **Si uno se queda atrás, dar un salto adelante.** Cuando Microsoft sumó grabadoras de CD, Apple creó iTunes y cambió la industria de la música.
-5. **Primero el buen producto, después las ganancias.** «Céntrate en crear un gran producto, los beneficios llegarán».
-6. **No confiar demasiado en los focus group.** «La gente no sabe lo que quiere hasta que se lo enseñas».
-7. **Distorsionar la realidad** para derribar imposibles: a Wozniak, que pedía 6 meses, le dijo «¡Tú lo puedes hacer en 4 días!», y lo hizo. Los límites mentales son el mayor obstáculo.
+5. **Primero el buen producto, después las ganancias.** "Céntrate en crear un gran producto, los beneficios llegarán".
+6. **No confiar demasiado en los focus group.** "La gente no sabe lo que quiere hasta que se lo enseñas".
+7. **Distorsionar la realidad** para derribar imposibles: a Wozniak, que pedía 6 meses, le dijo "¡Tú lo puedes hacer en 4 días!", y lo hizo. Los límites mentales son el mayor obstáculo.
 8. **Transmitir permanentemente.** Todo comunica, hasta el empaque; su pasión por la caligrafía terminó en las tipografías de la Mac.
 9. **Exigir excelencia.** Todo producto pasaba por todas las pruebas posibles antes de salir.
 10. **Contratar a los mejores**, quizás mejores que el propio líder, y dejarlos brillar.
 
-Cierre del discurso de Stanford (2005): «Sigue hambriento, sigue insensato».
+Cierre del discurso de Stanford (2005): "Sigue hambriento, sigue insensato".
 
 > [!tip] Idea clave
 > Visión, foco y exigencia; decide de forma autocrática pero con un equipo R4 al que puede **delegar** el cómo.
@@ -58,8 +58,8 @@ Cierre del discurso de Stanford (2005): «Sigue hambriento, sigue insensato».
 ## 3. Consejos de Don Quijote a Sancho Panza (cuando lo hacen gobernador)
 
 - **Temer a Dios**: de allí viene la sabiduría.
-- **Conocerse a sí mismo**, «el más difícil conocimiento», para no «hincharte como rana, que quiso igualarse con el buey».
-- **Humildad**: no avergonzarse de venir de labradores; «la sangre se hereda y la virtud se adquiere».
+- **Conocerse a sí mismo**, "el más difícil conocimiento", para no "hincharte como rana, que quiso igualarse con el buey".
+- **Humildad**: no avergonzarse de venir de labradores; "la sangre se hereda y la virtud se adquiere".
 - **Justicia imparcial**: más compasión ante las lágrimas del pobre, pero no más justicia que ante el rico; buscar la verdad entre las dádivas del rico y los sollozos del pobre.
 - Si se dobla la vara de la justicia, que sea **por misericordia y no por soborno**.
 - Con el enemigo, olvidar la injuria y atender **la verdad del caso**; no dejarse cegar por la pasión propia.
@@ -100,18 +100,18 @@ Cualidades que los estudios suelen asociar con el liderazgo:
 6. Sentido claro de propósito o misión: metas claras, foco, compromiso.
 7. Orientación a resultados: dirigir cada acción a la misión y priorizar donde más rinde.
 8. Cooperación: trabajar bien con otros.
-9. Rechazo del determinismo: creer que uno puede «hacer la diferencia».
+9. Rechazo del determinismo: creer que uno puede "hacer la diferencia".
 10. Alentar y hacer crecer a quienes reportan al líder; delegar para que la gente se desarrolle.
 11. Ser modelo de rol: encarnar la misión y liderar con el ejemplo.
 12. Autoconocimiento (en estructuras no burocráticas).
-13. Autoconciencia: poder «liderarse» a uno mismo antes que a otros.
-14. Entender lo que el otro dice más que cómo lo dice: «ponerse en los zapatos del otro».
+13. Autoconciencia: poder "liderarse" a uno mismo antes que a otros.
+14. Entender lo que el otro dice más que cómo lo dice: "ponerse en los zapatos del otro".
 
 **En el TP:** no quedan cubiertas por los principios la iniciativa emprendedora, el carisma, la dedicación a una causa, el propósito o misión propios, el rechazo del determinismo y la escucha empática.
 
 ## 6. *Group leadership* (liderazgo de grupo)
 
-- **Idea:** en lugar de un líder individual, **varias personas dan dirección**. Se adopta para aumentar la creatividad, bajar costos o achicar estructuras, o porque el jefe tradicional «cuesta» rendimiento al equipo. Quien mejor maneja cada fase del proyecto puede ser **líder temporal**.
+- **Idea:** en lugar de un líder individual, **varias personas dan dirección**. Se adopta para aumentar la creatividad, bajar costos o achicar estructuras, o porque el jefe tradicional "cuesta" rendimiento al equipo. Quien mejor maneja cada fase del proyecto puede ser **líder temporal**.
 - El **empowerment** de cada miembro energiza al personal y alimenta un ciclo de éxito.
 - Los líderes perseverantes, tenaces y con buena comunicación despiertan esas mismas cualidades en sus grupos.
 
@@ -132,7 +132,7 @@ Según la National School Boards Association (EE. UU.), un equipo necesita **con
 
 ## 7. *Leadership's relation with management* (liderazgo y administración)
 
-- **Hersey y Blanchard (1982):** la administración es un **subconjunto del liderazgo**. «Hay liderazgo cada vez que alguien intenta influir en la conducta de un individuo o grupo, cualquiera sea la razón»; la administración es el liderazgo en el que lo principal es lograr las metas de la organización.
+- **Hersey y Blanchard (1982):** la administración es un **subconjunto del liderazgo**. "Hay liderazgo cada vez que alguien intenta influir en la conducta de un individuo o grupo, cualquiera sea la razón"; la administración es el liderazgo en el que lo principal es lograr las metas de la organización.
 - **Distinción útil:** la administración implica **poder por posición**; el liderazgo, **poder por influencia**. Un buen gerente necesita habilidades de líder y un buen líder, de gerente.
 - **Zaleznik (1977):** el líder es un visionario inspirador, preocupado por la sustancia; el gerente, un planificador preocupado por el proceso.
 - **Bennis (1989)**, doce diferencias:
@@ -149,7 +149,7 @@ Según la National School Boards Association (EE. UU.), un equipo necesita **con
 | Acepta el statu quo | Lo desafía |
 | Mira el resultado final | Mira el horizonte |
 | Imita | Origina |
-| Es el «buen soldado» clásico | Es su propia persona |
+| Es el "buen soldado" clásico | Es su propia persona |
 | Copia | Es original |
 
 - **Birch (1999):** el gerente se ocupa de las tareas; el líder, de las personas, sin descuidar los logros (liderazgo en costos, ingresos, tiempo y valor de mercado). El líder sabe que la tarea se cumple gracias a la buena voluntad de los demás y ve a las personas como personas, no como un recurso intercambiable. Para él, la ganancia es un subproducto de la visión.
@@ -161,15 +161,15 @@ Según la National School Boards Association (EE. UU.), un equipo necesita **con
   - **Tecnócratas**: cerebrales, detallistas, exigentes, inflexibles. Para el **trabajo ingrato** (ej.: achicar).
   - Ningún perfil es mejor en sí mismo, y el líder equilibrado con los tres es rarísimo: no encontró ninguno.
 
-## 8. 10 Pines — «Un mundo sin CEO»
+## 8. 10 Pines — "Un mundo sin CEO"
 
 > [!note] Fuente
-> La nota original («Un mundo sin CEO: cómo funciona la empresa argentina libre de jefes») no estaba en la carpeta. Este resumen sale de otras coberturas del caso: BBC vía iProfesional (6/5/2021) y Corporate Rebels. Conviene cotejarlo con la nota de la cátedra.
+> La nota original ("Un mundo sin CEO: cómo funciona la empresa argentina libre de jefes") no estaba en la carpeta. Este resumen sale de otras coberturas del caso: BBC vía iProfesional (6/5/2021) y Corporate Rebels. Conviene cotejarlo con la nota de la cátedra.
 
 - Empresa argentina de desarrollo de software y capacitación ágil (Buenos Aires), fundada por desarrolladores de la comunidad ágil; alrededor de 80–100 personas.
-- **Sin CEO ni gerentes.** Estructura horizontal inspirada en la **sociocracia** y en Ricardo Semler (Semco). Se organiza en **círculos** autónomos (selección, finanzas, ventas, etc.). Hay referentes por experiencia («asociados», «maestros», mentores).
+- **Sin CEO ni gerentes.** Estructura horizontal inspirada en la **sociocracia** y en Ricardo Semler (Semco). Se organiza en **círculos** autónomos (selección, finanzas, ventas, etc.). Hay referentes por experiencia ("asociados", "maestros", mentores).
 - **Decisiones por consentimiento** en reuniones mensuales abiertas, donde se tratan clientes, gastos, finanzas y sueldos. Los nuevos se suman después de 3 meses de prueba.
-- **Sueldos**: se revisan tres veces por año en la «reunión de honorarios»; cualquiera puede pedir un aumento y se debate abiertamente. Las finanzas son transparentes.
+- **Sueldos**: se revisan tres veces por año en la "reunión de honorarios"; cualquiera puede pedir un aumento y se debate abiertamente. Las finanzas son transparentes.
 - **Reparto del 50% de las ganancias** entre el personal.
 - **Selección**: la entrevista final la hace todo el equipo y busca el encaje cultural; se han frenado ingresos de gente muy talentosa por no encajar.
 - **Críticas**: dudas sobre si escala al duplicarse la plantilla, riesgo de pensamiento de grupo, desventaja para los perfiles introvertidos y para la diversidad, y decisiones más lentas.
@@ -178,4 +178,4 @@ Según la National School Boards Association (EE. UU.), un equipo necesita **con
 
 - **Ningún estilo es el mejor en abstracto:** San Martín y Gates dicen (seguidores R1), Quijote vende (R2), Jobs delega (R4) y 10 Pines lleva la delegación al extremo, porque su gente es R4.
 - **Poder por posición o por influencia:** San Martín y Gates se apoyan en la autoridad; Jobs y Quijote, en la influencia; 10 Pines elimina el poder de posición.
-- **Liderar y administrar se complementan:** Jobs es más «artista» y San Martín combina al artista (la campaña) con el tecnócrata (las instrucciones de Maipú). Para el ISI, ver la reflexión del [[TP Liderazgo - Riedel.docx|TP]].
+- **Liderar y administrar se complementan:** Jobs es más "artista" y San Martín combina al artista (la campaña) con el tecnócrata (las instrucciones de Maipú). Para el ISI, ver la reflexión del [[TP Liderazgo - Riedel.docx|TP]].
