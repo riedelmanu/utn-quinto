@@ -12,4 +12,5 @@ Volver a [[Inicio]]
 - [[TP3 - Optimización de consultas]]
 
 ## Material
-- Carpetas de TPs: `GAD TP1/`, `GAD TP2/`, `GAD TP3/` (en la raíz)
+- Carpetas de TPs: `GAD TP1/`, `GAD TP2/`, `GAD TP3/`, `GAD TP4 - Funciones de distancia/` (en la raíz)
+- Búsquedas por similitud: diapositivas en `GAD TP4 - Funciones de distancia/`
