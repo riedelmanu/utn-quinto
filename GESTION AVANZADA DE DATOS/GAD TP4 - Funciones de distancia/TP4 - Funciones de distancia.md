@@ -19,6 +19,7 @@ Trabajo Práctico I de búsquedas por similitud (espacios métricos):
 ## Archivos
 - `TP4-Funciones-de-distancia-resuelto.pdf`: resolución.
 - `tp4_distancias.py`: programa con todos los cálculos (`python3 tp4_distancias.py`).
+- `TP4-Funciones-de-distancia.ipynb`: notebook con las consignas y el código de cada ejercicio.
 - Enunciado y diapositivas de búsquedas por similitud.
 
 ## Avance
