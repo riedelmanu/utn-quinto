@@ -15,3 +15,6 @@
 
 # Repos git propios dentro del vault (no se suben acá; ver nota de IO)
 INVESTIGACION OPERATIVA/IO/tpi/
+
+# Dataset que descarga el notebook de minería de texto (13 MB, se vuelve a bajar solo)
+CIENCIA DE DATOS/mineria de texto/Magazine_Subscriptions.json.gz
