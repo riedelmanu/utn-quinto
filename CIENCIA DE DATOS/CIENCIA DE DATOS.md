@@ -10,7 +10,10 @@ Volver a [[Inicio]]
 ## Resumen
 - [[Resumen Ciencia de Datos]]
 - [[Preguntas de estudio - Ciencia de Datos]]
-- [[Preguntas de ejemplo del parcial - Ciencia de Datos]]
+- [[Preguntas de ejemplo del parcial - Ciencia de Datos]] (incluye el parcial 2025 resuelto)
+
+## Parciales anteriores
+En `Parciales anteriores/`: parcial 2025 resuelto por dos alumnos, sin corrección del profesor — [[GRANDI, TOBÍAS - PARCIAL.pdf]] · [[ciaponi_ciencia_de_datos (1).pdf]]
 
 ## Unidades y diapositivas
 | # | Unidad | Diapositivas |
