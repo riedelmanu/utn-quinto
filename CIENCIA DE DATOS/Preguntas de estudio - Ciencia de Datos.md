@@ -5,7 +5,7 @@ tags: [resumen, preguntas, ciencia-de-datos]
 ---
 # Preguntas de estudio — Ciencia de Datos
 
-Volver a [[CIENCIA DE DATOS]] · Teoría en [[Resumen Ciencia de Datos]]
+Volver a [[CIENCIA DE DATOS]] · Teoría en [[Resumen Ciencia de Datos]] · Práctica de examen en [[Preguntas de ejemplo del parcial - Ciencia de Datos]]
 
 > [!info] Cómo leer esto
 > Las respuestas se basan en las diapositivas. Lo que la cátedra pide **investigar** (o que no está en las diapos) está marcado con *(investigar)*. Los "📓" indican el notebook del repo `ciencia-de-datos/notebooks/` donde se ve el tema en práctica.

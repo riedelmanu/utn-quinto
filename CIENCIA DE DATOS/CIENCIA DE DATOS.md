@@ -10,6 +10,7 @@ Volver a [[Inicio]]
 ## Resumen
 - [[Resumen Ciencia de Datos]]
 - [[Preguntas de estudio - Ciencia de Datos]]
+- [[Preguntas de ejemplo del parcial - Ciencia de Datos]]
 
 ## Unidades y diapositivas
 | # | Unidad | Diapositivas |
