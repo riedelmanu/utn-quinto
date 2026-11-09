@@ -7,6 +7,10 @@ tags: [materia]
 
 Volver a [[Inicio]]
 
+## Programa y evaluación
+- [[Criterios de aprobación - Ciencia de Datos]] — evaluación por competencias (RA1–RA3): rúbricas, puntajes y qué saber para cada criterio
+- Programa: [[Ciencia de Datos 2026 - Planificación.pdf]]
+
 ## Resumen
 - [[Resumen Ciencia de Datos]]
 - [[Preguntas de estudio - Ciencia de Datos]]
