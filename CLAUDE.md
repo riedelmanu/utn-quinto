@@ -27,4 +27,5 @@ Esta carpeta es a la vez un vault de Obsidian y el espacio de trabajo de Claude 
 
 ## Investigación Operativa
 - Todo lo del 2° parcial (PNL y Pronósticos) va en `INVESTIGACION OPERATIVA/Parcial 2/`: notas en la raíz de esa carpeta, material de la cátedra en `Material de cátedra/`, libros y resúmenes de otros alumnos en `Libros y resúmenes/`. La nota índice es `Parcial 2.md`.
+- Todo lo del 3er parcial (Modelos de stock / inventarios) va en `INVESTIGACION OPERATIVA/Parcial 3/` con la misma estructura (`Material de cátedra/`, `GeoGebra/`, `img/`). La nota índice es `Parcial 3.md`. Los libros y resúmenes de otros alumnos siguen en `Parcial 2/Libros y resúmenes/`.
 - En preguntas de práctica, las respuestas van en callouts plegados (`> [!check]- Ver respuesta`).
