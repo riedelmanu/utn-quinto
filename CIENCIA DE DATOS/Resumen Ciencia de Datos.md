@@ -21,6 +21,8 @@ Volver a [[CIENCIA DE DATOS]] · [[Inicio]] · Preguntas respondidas: [[Pregunta
 - [[#7. Modelado — Agrupamiento]]
 - [[#8. Modelado — Asociaciones]]
 - [[#9. Modelado — Detección de Anomalías]]
+- [[#10. Minería de Texto]]
+- [[#11. Sistemas Recomendadores]]
 - [[#Preguntas de repaso]]
 
 ---
@@ -358,6 +360,150 @@ Caso: fraude con tarjeta de crédito (monto o lugar inusual).
 
 ---
 
+## 10. Minería de Texto
+📎 [[MineradeTexto.pdf]]
+
+**Contexto:** Big Data (las 3 V) → gran parte de los datos son **no estructurados**, y la mayoría son **textos** (documentos, blogs, tweets). Hacen falta técnicas diseñadas para este tipo de dato.
+
+**Minería de texto (*text mining*):** proceso de **extraer conocimiento** a partir de **datos textuales no estructurados**.
+
+**Aplicaciones:** análisis de sentimientos (feedback de usuarios) · investigación de mercado (tendencias y modas) · detección de fraudes (reclamos fraudulentos) · investigación científica (patrones en papers, charlas).
+
+### Terminología
+| Término | Definición |
+|---|---|
+| **Corpus** | Colección de documentos de texto. Uno o varios idiomas · estático o dinámico · etiquetado o no |
+| **Documento** | Unidad discreta de información textual dentro de la colección. Relación muchos a muchos con los corpus; puede no corresponder a un documento físico; semi-estructurado o no estructurado |
+| **Características** | **Caracteres** (bolsa de caracteres, **n-gramas**) · **palabras** · **términos** (palabras o frases con carga semántica) · **conceptos** (categorización) |
+
+Ejemplo de la diapo: *"Messi emprendió un viaje profesional hasta convertirse en el jugador más importante del mundo."* Se puede describir por sus caracteres, sus palabras, términos como "jugador más importante" o conceptos como *fútbol*.
+
+### Preparación de textos
+La minería de textos **depende mucho de la preparación**. Objetivo: crear **representaciones estructuradas** que "expongan" el significado del texto a los algoritmos. Tiene **tres partes**:
+
+| # | Parte | Qué hace |
+|---|---|---|
+| 1 | **Preprocesamiento preparatorio** | Documento "crudo" → **secuencia de caracteres**. Sacar el texto de un PDF, imagen u audio; identificar la estructura (párrafos, columnas, conclusiones) y los metadatos (título, autores). Depende de la representación del texto |
+| 2 | **Procesamiento de Lenguaje Natural (PLN)** | Procesamientos **generales**, independientes del problema; dependen del **idioma** |
+| 3 | **Representación numérica** | Pasar el texto a **vectores** que puedan usar los algoritmos |
+
+**PLN — tareas:**
+- **Tokenización:** dividir el texto en palabras o términos (*tokens*).
+- **Lematización:** llevar cada palabra a su **lema** (forma no flexionada por género, número, conjugación). *Huida, Huirá, Huiremos, Huyó → Huir*.
+- **Etiquetado de partes del discurso (POS):** verbo, sustantivo, preposición, adjetivo… (o categorías especializadas).
+- **Análisis sintáctico:** sujeto, predicado, modificadores, objetos, subordinadas.
+- *(complemento)* **Stopwords** (sacar palabras vacías: "el", "de", "que"), **normalización** (minúsculas, tildes, puntuación) y **stemming** (cortar sufijos hasta la raíz; más rápido pero más tosco que lematizar).
+
+> [!example] Ejemplo de la diapo (Chequeado, elecciones 2023)
+> Palabras más repetidas en los discursos de Massa y Milei. "Argentina / Argentino / Argentinos", "Todos / Todas" y "Quiero / Queremos" se cuentan **por separado** aunque son la misma palabra → sin lematizar, el conteo se reparte y la representación pierde fuerza.
+
+**Representación numérica:**
+- **Bolsa de palabras (*bag of words*):** ignora el orden.
+  - **Conjunto (set) / one-hot:** 1 si el término está en el documento, 0 si no.
+  - **Vector de frecuencias:** cuántas veces aparece cada término.
+- **TF-IDF:** **importancia** de un término en un documento.
+  - **TF:** frecuencia relativa del término en el documento.
+  - **IDF:** cuánta información aporta el término según si es **común o raro** en el corpus.
+
+*(complemento — fórmulas)*
+$$TF(t,d) = \frac{f_{t,d}}{|d|} \qquad IDF(t) = \log\frac{N}{n_t} \qquad TFIDF(t,d) = TF(t,d)\cdot IDF(t)$$
+($N$ = cantidad de documentos, $n_t$ = documentos que contienen $t$.)
+
+> [!example]- Ejemplo comparado (corpus de 3 documentos, log base 10)
+> d1 = "el gato come pescado, el gato duerme" · d2 = "el perro come carne" · d3 = "el perro duerme"
+>
+> | d1 | el | gato | come | pescado | duerme | perro | carne |
+> |---|---|---|---|---|---|---|---|
+> | One-hot | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
+> | Frecuencias | 2 | 2 | 1 | 1 | 1 | 0 | 0 |
+> | TF-IDF | **0** | **0,136** | 0,025 | 0,068 | 0,025 | 0 | 0 |
+>
+> "el" aparece en los 3 documentos → IDF = log(3/3) = 0 → **no aporta nada**, aunque sea la más frecuente. "gato" es frecuente en d1 y no aparece en otros → es la que mejor **caracteriza** a d1.
+
+- **Embeddings:** representación **vectorial densa** de una palabra, frase o concepto en un **espacio métrico**. Se busca que:
+  - palabras **similares** queden **vecinas**;
+  - las relaciones se conserven: la distancia de una palabra a su opuesto sea parecida a la de otro par (*man → woman ≈ king → queen*).
+  - Ejemplo: **Word2Vec**. *(complemento)* Son vectores de pocas dimensiones (100–300) aprendidos del contexto, a diferencia de la bolsa de palabras: vectores enormes (un lugar por término del vocabulario), **dispersos** y sin semántica ("auto" y "coche" son ortogonales).
+
+### Actividades de minería
+- **Agrupamiento:** particionar la colección según su similitud. Sirven los algoritmos clásicos (K-Means) sobre los vectores, con cambios: **similitud coseno** como distancia, y el centroide **excluye las palabras poco frecuentes**.
+- **Clasificación:** predecir la clase de los documentos. Los espacios son **dispersos**: la **presencia** de un término informa más que su ausencia. Algoritmos: **K-NN**, **clasificador de Bayes**, **SVM para espacios dispersos**.
+- **Más:** descubrimiento de novedades, **modelado de temas**, búsqueda de asociaciones, búsqueda de anomalías.
+
+### Similitud entre vectores de texto *(complemento — "Investigar")*
+- **Coseno:** $\cos(\vec{a},\vec{b}) = \frac{\vec{a}\cdot\vec{b}}{\|\vec{a}\|\,\|\vec{b}\|}$ → mide el **ángulo**, no el largo. La más usada en texto y embeddings. Distancia coseno = 1 − cos.
+- **Producto punto:** igual al coseno si los vectores están normalizados.
+- **Euclídea / Manhattan:** dependen de la **magnitud** (un documento largo queda "lejos" aunque hable de lo mismo).
+- **Jaccard:** $\frac{|A \cap B|}{|A \cup B|}$, para representaciones de **conjunto** (one-hot).
+
+📓 Práctica: `3.07.gdr.text_mining.ipynb` → análisis de sentimientos sobre reseñas de Amazon con **TF-IDF + regresión logística**.
+
+---
+
+## 11. Sistemas Recomendadores
+📎 [[Ciencia_de_datos___Sistemas_recomendadores.pdf]]
+
+En la web se pide **feedback** a los usuarios: **explícito** (Netflix pregunta si te gustó una película) o **implícito** (basado en las interacciones con el sitio).
+
+**Idea:** **predecir las preferencias** de los usuarios.
+- **Usuario:** entidad que tiene preferencias y a la que le recomendamos.
+- **Item:** producto o servicio que se recomienda.
+- Se recomienda a partir de las **interacciones históricas** usuario–item.
+
+**Hipótesis:** hay **dependencias significativas** entre usuarios y actividades alrededor de los items (quien ve un documental histórico probablemente quiera más documentales que películas de acción). Se aprenden de la **matriz de ratings**; **más interacciones** → mejores predicciones.
+
+### Formulación del problema
+| Versión | Qué se busca |
+|---|---|
+| **Predicción** | El rating de un par (usuario, item). Matriz **incompleta** $M_{m \times n}$ (m usuarios, n items): con los valores observados se predicen los faltantes → *matrix completion problem* |
+| **Ranking** | No hace falta toda la matriz: solo los **top-k items** para un usuario (o top-k usuarios para un item) → *top-k recommendation problem* |
+
+### Objetivos
+Negocio: **aumentar la ganancia** por venta de productos o servicios. Para eso las recomendaciones deben tener:
+- **Relevancia:** interesantes para el usuario.
+- **Novedad:** items que el usuario **no consumió** antes.
+- **Serendipia:** cierta **sorpresa**, descubrir preferencias que no había considerado.
+- **Diversidad:** si hay variedad, es más probable que elija al menos uno.
+
+### Tipos
+Datos que usan: **interacciones** usuario–item (ratings, comportamiento) y **características** (atributos) de usuarios e items.
+
+| Tipo | Usa | Idea |
+|---|---|---|
+| **Filtro colaborativo** | Interacciones de **muchos usuarios** | Matriz **dispersa** (cada usuario consumió una mínima parte). Se "imputan" los faltantes, porque los ratings están muy correlacionados entre usuarios e items |
+| **Basado en contenido** | Preferencias + **atributos de los items** | Le gustó *Terminator* y no hay datos de otros usuarios → buscar películas con descripción parecida. Por usuario: modelo de **regresión o clasificación** con las descripciones de los items que consumió y sus puntajes |
+| *(complemento)* **Basado en conocimiento** | **Requisitos explícitos** del usuario + conocimiento del dominio | Reglas/restricciones o casos similares. Para items que se compran poco (casas, autos) |
+| *(complemento)* **Híbrido** | Combinación | Suma las ventajas (ej. contenido para items nuevos + colaborativo para el resto) |
+
+**Filtro colaborativo — variantes:**
+- **Basados en vecindarios:**
+  - **User-based:** el rating de (usuario, item) se imputa con lo que opinan **de ese item** los **usuarios con preferencias similares**.
+  - **Item-based:** se imputa con lo que opinó **ese usuario** de **items similares**.
+- **Basados en modelos:** un modelo de **machine learning** aprende las relaciones implícitas (ej. **factorización de matrices**).
+
+> [!example] Ejemplo de la diapo (5 usuarios × 4 apps; ¿le gusta el item 3 al usuario 5?)
+> | | Item 1 | Item 2 | Item 3 | Item 4 |
+> |---|---|---|---|---|
+> | U1 | ♥ | ✗ | ♥ | ♥ |
+> | U2 | | ♥ | ✗ | ✗ |
+> | U3 | ♥ | ♥ | ✗ | |
+> | U4 | ✗ | | ♥ | |
+> | **U5** | ♥ | ♥ | **?** | ✗ |
+>
+> - **User-based:** los usuarios parecidos a U5 son **U2 y U3** (coinciden en los items 1, 2 y 4). Los dos dieron ✗ al item 3 → **predicción ✗**.
+> - **Item-based:** el item más parecido al 3 es el **4** (U1 y U2 los calificaron igual). U5 le dio ✗ al item 4 → **predicción ✗**.
+
+*(complemento — fórmulas)*
+- Similitud entre usuarios: **Pearson** o **coseno** sobre los ratings en común (centrados por la media de cada usuario).
+- Predicción user-based: $\hat{r}_{uj} = \mu_u + \frac{\sum_{v \in P_u(j)} sim(u,v)\,(r_{vj} - \mu_v)}{\sum_{v \in P_u(j)} |sim(u,v)|}$ ($P_u(j)$ = los k usuarios más similares a u que puntuaron j).
+- **Factorización (SVD):** $M \approx U_k \Sigma_k V_k^T$. Usuarios e items quedan en un espacio de **k factores latentes** y el producto reconstruye la matriz **completa**.
+
+**Cold start (inicio frío)** *(complemento)*: usuario o item **nuevo, sin interacciones** → el filtro colaborativo no puede recomendar. Se resuelve con contenido, conocimiento, popularidad, preguntas de onboarding o sistemas híbridos (ver [[Preguntas de estudio - Ciencia de Datos#Unidad 11 — Sistemas recomendadores|preguntas]]).
+
+📓 Práctica (MovieLens): `3.08.gdr.user-based_reccomendation_system.ipynb` (user-based con similitud coseno) · `3.09.gdr.matrix_factorization.ipynb` (SVD con k = 50).
+
+---
+
 ## Preguntas de repaso
 > Las preguntas oficiales de la cátedra, respondidas, están en [[Preguntas de estudio - Ciencia de Datos]].
 
@@ -378,3 +524,11 @@ Caso: fraude con tarjeta de crédito (monto o lugar inusual).
 - [ ] Definir objeto central, ddr, dr y dc en DBSCAN.
 - [ ] Calcular soporte y confianza de una regla. Enunciar la propiedad A-priori.
 - [ ] Diferencia entre ruido y anomalía. Tipos de anomalías.
+- [ ] Nombrar las tres partes de la preparación de textos y qué hace cada una.
+- [ ] Tokenización vs lematización vs stemming. ¿Qué problema muestra el ejemplo de Chequeado?
+- [ ] Calcular one-hot, frecuencias y TF-IDF de un documento. ¿Por qué una palabra muy frecuente puede tener TF-IDF 0?
+- [ ] ¿Por qué se usa similitud coseno en texto y no distancia euclídea?
+- [ ] Relevancia, novedad, serendipia y diversidad: definir cada una.
+- [ ] Problema de predicción vs problema de ranking.
+- [ ] Resolver una matriz chica con user-based y con item-based.
+- [ ] Colaborativo vs contenido vs conocimiento. ¿Cuál sirve ante un cold start?

@@ -11,7 +11,7 @@ Volver a [[CIENCIA DE DATOS]] · Teoría en [[Resumen Ciencia de Datos]]
 > Las respuestas se basan en las diapositivas. Lo que la cátedra pide **investigar** (o que no está en las diapos) está marcado con *(investigar)*. Los "📓" indican el notebook del repo `ciencia-de-datos/notebooks/` donde se ve el tema en práctica.
 > "Explotación de información" y "ciencia de datos" se usan como sinónimos.
 
-**Unidades:** [[#Unidad 1 — Metodologías|1]] · [[#Unidad 2 — Conocimiento de los datos|2]] · [[#Unidad 3 — Preparación de los datos|3]] · [[#Unidad 4 — Regresión lineal|4]] · [[#Unidad 5 — Clasificación|5]] · [[#Unidad 6 — Validación|6]] · [[#Unidad 7 — Agrupamiento|7]] · [[#Unidad 8 — Asociaciones|8]] · [[#Unidad 9 — Detección de anomalías|9]]
+**Unidades:** [[#Unidad 1 — Metodologías|1]] · [[#Unidad 2 — Conocimiento de los datos|2]] · [[#Unidad 3 — Preparación de los datos|3]] · [[#Unidad 4 — Regresión lineal|4]] · [[#Unidad 5 — Clasificación|5]] · [[#Unidad 6 — Validación|6]] · [[#Unidad 7 — Agrupamiento|7]] · [[#Unidad 8 — Asociaciones|8]] · [[#Unidad 9 — Detección de anomalías|9]] · [[#Unidad 10 — Minería de texto|10]] · [[#Unidad 11 — Sistemas recomendadores|11]]
 
 ---
 
@@ -565,3 +565,173 @@ Es de densidad porque no usa un umbral de distancia global: **compara densidades
 3. **Si resultan ser errores o ruido**, se tratan en la preparación: corregirlas, imputarlas o eliminarlas.
 4. **Si son reales**, se conservan, se reportan y pueden **etiquetarse** para entrenar más adelante un modelo **supervisado** que las detecte. También pueden analizarse por separado (no "contaminan" a los modelos de lo normal).
 5. **Actualizar el modelo** periódicamente, porque el comportamiento "normal" cambia con el tiempo.
+
+---
+
+## Unidad 10 — Minería de texto
+📓 `3.07.gdr.text_mining.ipynb` (copia resuelta en `mineria de texto/`: análisis de sentimientos sobre reseñas de Amazon con TF-IDF; regresión logística, árbol y random forest con 5-fold estratificado)
+
+### ¿Qué es la minería de texto?
+Es el **proceso de extraer conocimiento a partir de datos textuales no estructurados**.
+
+Surge porque, en el contexto de Big Data, una gran parte de los datos **no tiene estructura** y la mayoría son **textos** (documentos, artículos de blogs, tweets, reseñas). Las técnicas clásicas de minería de datos trabajan sobre tablas de atributos, así que hacen falta técnicas específicas: primero **transformar el texto en una representación estructurada** (vectores) y después aplicar los algoritmos de minería (clasificación, agrupamiento, etc.).
+
+Ejemplos de uso: análisis de sentimientos, investigación de mercado, detección de fraudes, investigación científica.
+
+### ¿Cuáles son las tres partes del proceso de preparación de datos para minería de texto?
+1. **Preprocesamiento preparatorio.**
+2. **Procesamiento de Lenguaje Natural (PLN).**
+3. **Representación numérica.**
+
+Entre las tres crean **representaciones estructuradas** de los documentos que "exponen" su significado para que los algoritmos de minería puedan usarlo. La minería de textos depende mucho de esta preparación.
+
+### ¿Qué se hace en cada parte de este proceso?
+**1. Preprocesamiento preparatorio.** Convierte el documento "crudo" en un formato adecuado para seguir procesándolo: una **secuencia de caracteres**.
+- Obtener el texto de un PDF, de una imagen (OCR) o de un audio (transcripción).
+- Identificar partes de su **estructura** (párrafos, columnas, conclusiones).
+- Identificar **metadatos** (título, autores, fecha).
+
+Depende de cómo esté representado el texto originalmente.
+
+**2. Procesamiento de Lenguaje Natural.** Procesamientos **generales**, independientes del problema, que dependen de las características del **idioma**:
+- **Tokenización:** dividir el texto en palabras o términos.
+- **Lematización:** llevar cada palabra a su **lema** para estandarizarla (*Huida, Huirá, Huiremos, Huyó → Huir*). En el ejemplo de Chequeado de la diapo, "Argentina / Argentino / Argentinos" y "Quiero / Queremos" se contaban por separado.
+- **Etiquetado de partes del discurso:** verbo, sustantivo, adjetivo, preposición, etc.
+- **Análisis sintáctico:** sujeto, predicado, modificadores, objetos, oraciones subordinadas.
+- También: eliminar **stopwords**, pasar a minúsculas, sacar puntuación, **stemming**.
+
+**3. Representación numérica.** Pasa cada documento a un **vector** para que los algoritmos puedan operar sobre él: **bolsa de palabras** (conjunto / one-hot o vector de frecuencias), **TF-IDF** o **embeddings** (Word2Vec).
+
+📓 En el notebook, `TfidfVectorizer` hace en un solo paso la tokenización (pasa a minúsculas y separa en palabras) y la representación TF-IDF. Con `min_df=3` descarta las palabras que aparecen en menos de 3 documentos y con `ngram_range=(1, 2)` usa palabras y bigramas.
+
+### ¿Cuál es la diferencia entre one-hot encoding, vector de frecuencias y TF-IDF para representar un texto?
+Las tres representan cada documento como un vector con **una posición por término del vocabulario** e ignoran el orden de las palabras. Cambia **qué valor va en cada posición**:
+
+| | Valor de cada término | Qué captura | Limitación |
+|---|---|---|---|
+| **One-hot** (conjunto) | 1 si aparece, 0 si no | **Presencia** del término | No distingue una mención de diez |
+| **Vector de frecuencias** | Cantidad de apariciones | **Cuánto** aparece en el documento | Las palabras comunes ("el", "de") dominan el vector; favorece a los documentos largos |
+| **TF-IDF** | TF × IDF | **Importancia** del término en el documento **respecto del corpus** | Igual que las otras, no captura semántica ni orden |
+
+- **TF:** frecuencia **relativa** del término en el documento (apariciones / largo del documento), así no favorece a los documentos largos.
+- **IDF** $= \log(N / n_t)$: es **alto si el término es raro** en el corpus y vale **0 si aparece en todos** los documentos.
+
+Por eso TF-IDF premia los términos frecuentes **en ese documento** pero raros **en el resto**, que son los que mejor lo **caracterizan**. Ejemplo (desarrollado en el [[Resumen Ciencia de Datos#10. Minería de Texto|resumen]]): en d1 = "el gato come pescado, el gato duerme", "el" tiene frecuencia 2 pero TF-IDF 0 porque está en todos los documentos, y "gato" tiene el valor más alto.
+
+### ¿Qué actividades se pueden realizar con la minería de texto?
+Las mismas de la minería de datos, aplicadas sobre la representación vectorial de los documentos:
+- **Agrupamiento:** particionar la colección según la similitud de los documentos (ej. agrupar noticias por tema). Sirve K-Means, usando **similitud coseno** y calculando el centroide **sin las palabras poco frecuentes**.
+- **Clasificación:** predecir la clase de un documento (spam / no spam, sentimiento, tema). Algoritmos: **K-NN**, **clasificador de Bayes**, **SVM para espacios dispersos**. Hay que tener en cuenta que los vectores son **dispersos**: la presencia de un término informa más que su ausencia.
+  📓 En el notebook: regresión logística sobre TF-IDF (accuracy de prueba 0,885 con 5 folds), mejor que random forest (0,846) y que el árbol de decisión (0,761), que sobreajustan (casi 1 en entrenamiento).
+- **Descubrimiento de novedades:** detectar documentos o temas nuevos en un flujo de textos.
+- **Modelado de temas:** descubrir los tópicos de los que habla un corpus.
+- **Búsqueda de asociaciones:** términos que aparecen juntos.
+- **Búsqueda de anomalías:** documentos atípicos (ej. reclamos fraudulentos).
+
+### ¿De qué forma medimos la similitud entre dos embeddings? ¿Qué medidas de similitud podemos usar? *(investigar)*
+Un embedding es un vector en un **espacio métrico**, así que la similitud se mide con una **función de similitud o de distancia entre vectores**. Cuanto más cerca están, más parecido es su significado; esa es justamente la propiedad que se busca al construirlos.
+
+| Medida | Fórmula | Rango | Comentario |
+|---|---|---|---|
+| **Similitud coseno** | $\frac{\vec{a}\cdot\vec{b}}{\lVert\vec{a}\rVert\,\lVert\vec{b}\rVert}$ | [−1, 1] | **La más usada.** Mide el ángulo, no la magnitud. 1 = misma dirección, 0 = ortogonales, −1 = opuestos |
+| **Distancia coseno** | $1 - \cos$ | [0, 2] | Versión "distancia" del coseno (la que se usa en K-Means sobre texto) |
+| **Producto punto** | $\sum a_i b_i$ | (−∞, ∞) | Rápido. Con vectores normalizados (norma 1) es igual al coseno |
+| **Distancia euclídea** | $\sqrt{\sum (a_i - b_i)^2}$ | [0, ∞) | Sensible a la magnitud. Con vectores normalizados ordena igual que el coseno ($d^2 = 2 - 2\cos$) |
+| **Distancia Manhattan** | $\sum \lvert a_i - b_i \rvert$ | [0, ∞) | Suma de diferencias por dimensión |
+| **Correlación de Pearson** | coseno de los vectores **centrados** en su media | [−1, 1] | Ignora desplazamientos de la media |
+| **Jaccard** | $\frac{\lvert A\cap B\rvert}{\lvert A\cup B\rvert}$ | [0, 1] | Para representaciones **de conjunto** (one-hot); no aplica a embeddings densos |
+
+**¿Por qué se prefiere el coseno?** En texto, la **dirección** del vector indica de qué se habla y la **magnitud** depende de factores como el largo del documento o la frecuencia de la palabra. Dos textos del mismo tema y distinta longitud quedan lejos con la distancia euclídea y cerca con el coseno. Es la medida que propone Aggarwal (sección 3.3, *Text Similarity Measures*), junto con la normalización TF-IDF.
+
+Para comparar **documentos** a partir de embeddings de palabras se suele **promediar** los embeddings de sus palabras y aplicar coseno, o usar medidas específicas como la *Word Mover's Distance* (cuánto hay que "mover" las palabras de un texto para llegar al otro).
+
+---
+
+## Unidad 11 — Sistemas recomendadores
+📓 `3.08.gdr.user-based_reccomendation_system.ipynb` (MovieLens, filtro colaborativo user-based con similitud coseno) · `3.09.gdr.matrix_factorization.ipynb` (factorización con SVD)
+
+### ¿Cuáles son las características de las recomendaciones de los sistemas recomendadores?
+El objetivo de negocio es **incrementar la ganancia** por la venta de productos o servicios. Para lograrlo, las recomendaciones deben tener:
+- **Relevancia:** los items recomendados tienen que ser **interesantes** para el usuario. Es el requisito básico.
+- **Novedad:** recomendar items que el usuario **no consumió** antes. Recomendarle una película que ya vio no aporta.
+- **Serendipia:** que el usuario encuentre cierta **sorpresa** y descubra preferencias que no había considerado. Va más allá de la novedad: a alguien que siempre come comida india, un restaurante indio nuevo es una novedad; uno etíope es serendipia.
+- **Diversidad:** que la lista tenga items **variados**. Si todos son parecidos y no le gusta uno, probablemente no le guste ninguno; con diversidad es más probable que elija al menos uno.
+
+### ¿Qué tipo de datos se usan para entrenar?
+Dos tipos:
+1. **Interacciones entre usuarios e items** → la **matriz de ratings** $M_{m\times n}$ (m usuarios × n items), muy **dispersa** porque cada usuario consumió una parte mínima de los items.
+   - **Explícitas:** el usuario declara su opinión (estrellas, me gusta / no me gusta).
+   - **Implícitas:** se deducen del **comportamiento** (compras, clics, reproducciones, tiempo de visualización). Suelen ser solo positivas: sé que compró algo, pero no sé qué le disgustó.
+2. **Características (atributos) de usuarios e items:** descripción, género, palabras clave del item; datos demográficos del usuario. Las usan los sistemas basados en contenido.
+
+Los sistemas basados en conocimiento usan además los **requisitos explícitos** del usuario y conocimiento del dominio.
+
+📓 En MovieLens, `ratings.csv` son las interacciones explícitas (userId, movieId, rating de 0,5 a 5, timestamp: más de 100 mil ratings de 610 usuarios sobre 9724 películas). `movies.csv` (título, géneros) y `tags.csv` son atributos de los items.
+
+### ¿Cómo puedo clasificar a los sistemas recomendadores?
+**Según los datos que usan** (diapo):
+- **Filtro colaborativo:** usa las preferencias de **muchos usuarios** (la matriz de ratings).
+  - **Basados en vecindarios:** **user-based** e **item-based**.
+  - **Basados en modelos:** un modelo de machine learning aprende las relaciones implícitas (📓 factorización de matrices con SVD en 3.09).
+- **Basados en contenido:** usan los **atributos de los items** que el usuario consumió y sus puntajes para entrenar un modelo de regresión o clasificación por usuario.
+
+*(investigar, Aggarwal cap. 1)* También existen:
+- **Basados en conocimiento:** requisitos explícitos del usuario + conocimiento del dominio.
+- **Demográficos:** recomiendan según atributos del usuario (edad, país).
+- **Híbridos:** combinan varios de los anteriores.
+
+**Según el problema que resuelven:** **predicción** (estimar el rating de un par usuario–item, completar la matriz) o **ranking** (obtener los top-k items para un usuario).
+
+### ¿Cuál es la diferencia entre un sistema recomendador basado en usuarios vs un sistema basado en items?
+Los dos son de **filtro colaborativo basado en vecindarios**: imputan el rating faltante de un par (usuario u, item j) a partir de sus vecinos. La diferencia es **quiénes son los vecinos**:
+
+| User-based | Item-based |
+|---|---|
+| Busca **usuarios similares** a u (filas parecidas de la matriz) | Busca **items similares** a j (columnas parecidas de la matriz) |
+| Predice con lo que opinaron **esos usuarios** del **item j** | Predice con lo que opinó **el usuario u** de **esos items** |
+| "A usuarios como vos les gustó esto" | "Porque te gustó X, te recomendamos Y" |
+
+En el ejemplo de la diapo (desarrollado en el [[Resumen Ciencia de Datos#11. Sistemas Recomendadores|resumen]]), los dos llegan a la misma predicción por caminos distintos: user-based mira a U2 y U3, que se parecen a U5; item-based mira el item 4, que se parece al 3.
+
+*(complemento)* Diferencias prácticas:
+- **Estabilidad y escala:** los gustos de los usuarios cambian y suelen ser muchos más que los items. Las similitudes entre items son más estables, se pueden **precalcular** y escalan mejor.
+- **Precisión:** item-based suele ser más preciso, porque usa los propios ratings del usuario.
+- **Explicabilidad:** item-based es más fácil de explicar ("porque viste X").
+- **Diversidad:** user-based da recomendaciones más variadas y sorpresivas; item-based tiende a recomendar cosas muy parecidas a lo que ya consumió.
+
+📓 En 3.08 (user-based): matriz usuario × película solo con las películas con más de 100 ratings → normaliza los ratings de cada usuario (hay usuarios que puntúan más alto que otros) → **similitud coseno** entre usuarios → toma los **10 más similares** → puntúa las películas que no vio con los ratings de esos vecinos **ponderados por su similitud**.
+
+### ¿Qué es el cold start o inicio frío? ¿Qué técnicas tenemos para solucionarlo? *(investigar)*
+Es el problema de no poder hacer buenas recomendaciones porque **faltan interacciones**. El filtro colaborativo depende de la matriz de ratings, así que no puede recomendarle nada a quien no tiene historial ni recomendar un item que nadie calificó. Hay tres casos:
+- **Usuario nuevo:** no se sabe qué le gusta.
+- **Item nuevo:** nadie lo calificó, así que nunca aparece en las recomendaciones aunque sea bueno.
+- **Sistema nuevo:** la matriz entera está casi vacía.
+
+**Técnicas:**
+
+| Técnica | Cómo ayuda | Caso |
+|---|---|---|
+| **Basado en contenido** | Usa los atributos del item: uno nuevo se recomienda a quien le gustaron items parecidos | Item nuevo |
+| **Basado en conocimiento** | Pregunta requisitos explícitos ("¿qué presupuesto tenés?"); no necesita historial | Usuario nuevo |
+| **Onboarding** | Al registrarse, el usuario elige géneros o puntúa algunos items (Netflix, Spotify) | Usuario nuevo |
+| **Popularidad** | Recomendar lo más visto o mejor puntuado hasta tener datos del usuario | Usuario nuevo, sistema nuevo |
+| **Demográfico** | Recomendar lo que les gusta a usuarios del mismo perfil (edad, país) | Usuario nuevo |
+| **Feedback implícito** | Usar clics, búsquedas y tiempo de visualización desde la primera sesión, sin esperar ratings | Usuario nuevo |
+| **Exploración / aprendizaje activo** | Elegir qué items mostrar para aprender rápido los gustos y mostrar items nuevos a algunos usuarios para juntar ratings (ej. *multi-armed bandits*) | Usuario e item nuevos |
+| **Sistemas híbridos** | Usar contenido o conocimiento al principio y pasar a colaborativo cuando hay datos | Todos |
+
+### ¿Qué es un sistema basado en conocimiento (knowledge-based system) y cuándo son útiles?
+Es un sistema recomendador que no se basa en el historial de ratings sino en los **requisitos explícitos del usuario** y en **conocimiento del dominio** (reglas, restricciones, funciones de similitud definidas por expertos) para encontrar los items que mejor cumplen lo que el usuario pide. El usuario participa activamente diciendo qué quiere.
+
+Hay dos tipos *(Aggarwal)*:
+- **Basados en restricciones:** el usuario fija requisitos (precio máximo, cantidad de ambientes, barrio) y el sistema aplica reglas del dominio para filtrar los items que los cumplen (ej. "familia con hijos → mínimo 3 dormitorios").
+- **Basados en casos:** el usuario da un **caso de referencia** ("quiero un auto como este") y el sistema busca items similares con una función de similitud del dominio. Suele permitir **críticas** ("como este, pero más barato") para refinar la búsqueda.
+
+**Cuándo son útiles:**
+- Items que se compran **muy poco** y por eso tienen **pocos ratings**: casas, autos, servicios financieros, viajes, electrónica cara.
+- Items **complejos**, con muchos atributos y opciones, donde lo que importa son requisitos concretos.
+- Cuando los ratings **pierden vigencia**: la opinión sobre un auto o una computadora de hace 5 años ya no sirve.
+- En el **cold start**, porque no necesitan historial.
+- Cuando el usuario quiere **control explícito** sobre lo que busca y saber por qué se le recomienda algo.
+
+**Desventaja:** construir y mantener la base de conocimiento es costoso (hacen falta expertos del dominio) y el sistema no aprende solo de los datos.

@@ -24,6 +24,9 @@ Volver a [[Inicio]]
 | 7 | Modelado - Agrupamiento | [[P11_Modelado-agrupamiento-DBSCAN.pdf]] |
 | 8 | Modelado - Asociaciones | [[P9_Modelado-asociaciones.pdf]] |
 | 9 | Modelado - Detección de Anomalías | [[P12_Modelado-anomalías.pdf]] |
+| 10 | Minería de Texto | [[MineradeTexto.pdf]] |
+| 11 | Sistemas Recomendadores | [[Ciencia_de_datos___Sistemas_recomendadores.pdf]] |
 
 ## Repositorio de prácticas
 `ciencia-de-datos/` — repo git **compartido** (notebooks). Las diapositivas y los resúmenes van fuera de esa carpeta para que no entren al repo.
+`mineria de texto/` — mi copia resuelta del notebook `3.07.gdr.text_mining.ipynb` (análisis de sentimientos con TF-IDF + validación cruzada).
