@@ -1,0 +1,10 @@
+modalidad,representación,extracción base (ms),extracción consultas (ms),comparación (ms),equipo
+imagen,píxeles,25.008666998473927,8.23616599518573,6.5210830071009696,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+imagen,histograma,279.2437080061063,91.26154099794803,0.019291997887194157,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+imagen,"ResNet50 (layer2 y layer4, una pasada)",263.46133399783866,88.33350000350038,0.09608399705030024,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+texto,bolsa de palabras,0.48791700100991875,0.20566700550261885,0.011832999007310718,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+texto,TF-IDF,0.5250829999567941,0.21225000091362745,0.01412499841535464,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+texto,BGE-M3 denso,456.01504200021736,225.13479200279107,0.03320800169603899,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+sonido,MFCC 26,22.04270800575614,8.740916004171595,0.012166994565632194,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+sonido,MFCC 39 (secuencia),24.84579100564588,9.665666002547368,143.08050000545336,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"
+sonido,"wav2vec2 (media y media+desvío, una pasada)",398.9982080020127,156.80100000463426,0.06116599979577586,"Apple M5, Darwin arm64, solo CPU, 4 hilos de torch, lote de 1 objeto"

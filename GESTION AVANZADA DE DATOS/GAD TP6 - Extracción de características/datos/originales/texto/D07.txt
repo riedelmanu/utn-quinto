@@ -1,0 +1,1 @@
+El curso de C++ requiere conocimientos previos de programación.

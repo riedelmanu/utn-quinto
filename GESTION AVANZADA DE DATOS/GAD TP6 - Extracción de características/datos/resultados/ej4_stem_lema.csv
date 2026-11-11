@@ -1,0 +1,23 @@
+documento,token,stem (Snowball),lema (spaCy)
+D02,si,si,si
+D02,no,no,no
+D02,recordás,recordas,recordás
+D02,clave,clav,clave
+D02,solicitá,solicit,solicitar
+D02,enlace,enlac,enlace
+D02,recuperación,recuper,recuperación
+D02,correo,corre,correo
+D02,electrónico,electron,electrónico
+D05,préstamo,prestam,préstamo
+D05,libros,libr,libro
+D05,biblioteca,bibliotec,biblioteca
+D05,dura,dur,duro
+D05,semana,seman,semana
+D05,puede,pued,poder
+D05,renovarse,renov,renovar él
+D10,python,python,python
+D10,inicial,inicial,inicial
+D10,destinado,destin,destinado
+D10,personas,person,persona
+D10,nunca,nunc,nunca
+D10,programaron,program,programar

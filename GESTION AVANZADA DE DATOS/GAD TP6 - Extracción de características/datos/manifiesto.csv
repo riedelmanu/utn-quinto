@@ -1,0 +1,59 @@
+id,archivo,modalidad,rol,origen,condiciones
+IMG_O1_B1,datos/originales/imagenes/IMG_O1_B1.png,imagen,base,O1 (aro rojo),"fondo madera, luz normal, ángulo 0 grados, objeto obj47 de COIL-100"
+IMG_O1_B2,datos/originales/imagenes/IMG_O1_B2.png,imagen,base,O1 (aro rojo),"fondo mantel, luz tenue, ángulo 40 grados, objeto obj47 de COIL-100"
+IMG_O1_B3,datos/originales/imagenes/IMG_O1_B3.png,imagen,base,O1 (aro rojo),"fondo pared, luz fuerte, ángulo 320 grados, objeto obj47 de COIL-100"
+IMG_O1_Q,datos/originales/imagenes/IMG_O1_Q.png,imagen,consulta,O1 (aro rojo),"fondo escritorio, luz algo tenue, ángulo 20 grados, objeto obj47 de COIL-100"
+IMG_O2_B1,datos/originales/imagenes/IMG_O2_B1.png,imagen,base,O2 (aro azul),"fondo mantel, luz normal, ángulo 0 grados, objeto obj94 de COIL-100"
+IMG_O2_B2,datos/originales/imagenes/IMG_O2_B2.png,imagen,base,O2 (aro azul),"fondo pared, luz tenue, ángulo 40 grados, objeto obj94 de COIL-100"
+IMG_O2_B3,datos/originales/imagenes/IMG_O2_B3.png,imagen,base,O2 (aro azul),"fondo escritorio, luz fuerte, ángulo 320 grados, objeto obj94 de COIL-100"
+IMG_O2_Q,datos/originales/imagenes/IMG_O2_Q.png,imagen,consulta,O2 (aro azul),"fondo pared, luz algo tenue, ángulo 20 grados, objeto obj94 de COIL-100"
+IMG_O3_B1,datos/originales/imagenes/IMG_O3_B1.png,imagen,base,O3 (morrón rojo),"fondo pared, luz normal, ángulo 0 grados, objeto obj63 de COIL-100"
+IMG_O3_B2,datos/originales/imagenes/IMG_O3_B2.png,imagen,base,O3 (morrón rojo),"fondo escritorio, luz tenue, ángulo 40 grados, objeto obj63 de COIL-100"
+IMG_O3_B3,datos/originales/imagenes/IMG_O3_B3.png,imagen,base,O3 (morrón rojo),"fondo madera, luz fuerte, ángulo 320 grados, objeto obj63 de COIL-100"
+IMG_O3_Q,datos/originales/imagenes/IMG_O3_Q.png,imagen,consulta,O3 (morrón rojo),"fondo mantel, luz algo tenue, ángulo 20 grados, objeto obj63 de COIL-100"
+IMG_O4_B1,datos/originales/imagenes/IMG_O4_B1.png,imagen,base,O4 (morrón verde),"fondo escritorio, luz normal, ángulo 0 grados, objeto obj82 de COIL-100"
+IMG_O4_B2,datos/originales/imagenes/IMG_O4_B2.png,imagen,base,O4 (morrón verde),"fondo madera, luz tenue, ángulo 40 grados, objeto obj82 de COIL-100"
+IMG_O4_B3,datos/originales/imagenes/IMG_O4_B3.png,imagen,base,O4 (morrón verde),"fondo mantel, luz fuerte, ángulo 320 grados, objeto obj82 de COIL-100"
+IMG_O4_Q,datos/originales/imagenes/IMG_O4_Q.png,imagen,consulta,O4 (morrón verde),"fondo madera, luz algo tenue, ángulo 20 grados, objeto obj82 de COIL-100"
+IMG_O5_B1,datos/originales/imagenes/IMG_O5_B1.png,imagen,base,O5 (barco azul),"fondo madera, luz normal, ángulo 0 grados, objeto obj42 de COIL-100"
+IMG_O5_B2,datos/originales/imagenes/IMG_O5_B2.png,imagen,base,O5 (barco azul),"fondo mantel, luz tenue, ángulo 40 grados, objeto obj42 de COIL-100"
+IMG_O5_B3,datos/originales/imagenes/IMG_O5_B3.png,imagen,base,O5 (barco azul),"fondo pared, luz fuerte, ángulo 320 grados, objeto obj42 de COIL-100"
+IMG_O5_Q,datos/originales/imagenes/IMG_O5_Q.png,imagen,consulta,O5 (barco azul),"fondo escritorio, luz algo tenue, ángulo 20 grados, objeto obj42 de COIL-100"
+IMG_O6_B1,datos/originales/imagenes/IMG_O6_B1.png,imagen,base,O6 (barco verde),"fondo mantel, luz normal, ángulo 0 grados, objeto obj78 de COIL-100"
+IMG_O6_B2,datos/originales/imagenes/IMG_O6_B2.png,imagen,base,O6 (barco verde),"fondo pared, luz tenue, ángulo 40 grados, objeto obj78 de COIL-100"
+IMG_O6_B3,datos/originales/imagenes/IMG_O6_B3.png,imagen,base,O6 (barco verde),"fondo escritorio, luz fuerte, ángulo 320 grados, objeto obj78 de COIL-100"
+IMG_O6_Q,datos/originales/imagenes/IMG_O6_Q.png,imagen,consulta,O6 (barco verde),"fondo pared, luz algo tenue, ángulo 20 grados, objeto obj78 de COIL-100"
+D01,datos/originales/texto/D01.txt,texto,base,documento del enunciado,copia literal
+D02,datos/originales/texto/D02.txt,texto,base,documento del enunciado,copia literal
+D03,datos/originales/texto/D03.txt,texto,base,documento del enunciado,copia literal
+D04,datos/originales/texto/D04.txt,texto,base,documento del enunciado,copia literal
+D05,datos/originales/texto/D05.txt,texto,base,documento del enunciado,copia literal
+D06,datos/originales/texto/D06.txt,texto,base,documento del enunciado,copia literal
+D07,datos/originales/texto/D07.txt,texto,base,documento del enunciado,copia literal
+D08,datos/originales/texto/D08.txt,texto,base,documento del enunciado,copia literal
+D09,datos/originales/texto/D09.txt,texto,base,documento del enunciado,copia literal
+D10,datos/originales/texto/D10.txt,texto,base,documento del enunciado,copia literal
+D11,datos/originales/texto/D11.txt,texto,base,documento del enunciado,copia literal
+D12,datos/originales/texto/D12.txt,texto,base,documento del enunciado,copia literal
+Q1,datos/originales/texto/Q1.txt,texto,consulta,consulta del enunciado,copia literal
+Q2,datos/originales/texto/Q2.txt,texto,consulta,consulta del enunciado,copia literal
+Q3,datos/originales/texto/Q3.txt,texto,consulta,consulta del enunciado,copia literal
+Q4,datos/originales/texto/Q4.txt,texto,consulta,consulta del enunciado,copia literal
+Q5,datos/originales/texto/Q5.txt,texto,consulta,consulta del enunciado,copia literal
+Q6,datos/originales/texto/Q6.txt,texto,consulta,consulta del enunciado,copia literal
+SON_F1_B1,datos/originales/sonido/SON_F1_B1.wav,sonido,base,F1 (La biblioteca abre por la mañana.),"Eddy (español de México, sintetizador de macOS), 175 palabras/min, silencio 350 y 450 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F1_B2,datos/originales/sonido/SON_F1_B2.wav,sonido,base,F1 (La biblioteca abre por la mañana.),"Eddy (español de México, sintetizador de macOS), 190 palabras/min, silencio 450 y 350 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F1_B3,datos/originales/sonido/SON_F1_B3.wav,sonido,base,F1 (La biblioteca abre por la mañana.),"Eddy (español de México, sintetizador de macOS), 205 palabras/min, silencio 400 y 500 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F1_Q,datos/originales/sonido/SON_F1_Q.wav,sonido,consulta,F1 (La biblioteca abre por la mañana.),"Eddy (español de México, sintetizador de macOS), 140 palabras/min, silencio 400 y 400 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F2_B1,datos/originales/sonido/SON_F2_B1.wav,sonido,base,F2 (La biblioteca cierra por la mañana.),"Eddy (español de México, sintetizador de macOS), 175 palabras/min, silencio 350 y 450 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F2_B2,datos/originales/sonido/SON_F2_B2.wav,sonido,base,F2 (La biblioteca cierra por la mañana.),"Eddy (español de México, sintetizador de macOS), 190 palabras/min, silencio 450 y 350 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F2_B3,datos/originales/sonido/SON_F2_B3.wav,sonido,base,F2 (La biblioteca cierra por la mañana.),"Eddy (español de México, sintetizador de macOS), 205 palabras/min, silencio 400 y 500 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F2_Q,datos/originales/sonido/SON_F2_Q.wav,sonido,consulta,F2 (La biblioteca cierra por la mañana.),"Eddy (español de México, sintetizador de macOS), 140 palabras/min, silencio 400 y 400 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F3_B1,datos/originales/sonido/SON_F3_B1.wav,sonido,base,F3 (El laboratorio abre por la tarde.),"Eddy (español de México, sintetizador de macOS), 175 palabras/min, silencio 350 y 450 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F3_B2,datos/originales/sonido/SON_F3_B2.wav,sonido,base,F3 (El laboratorio abre por la tarde.),"Eddy (español de México, sintetizador de macOS), 190 palabras/min, silencio 450 y 350 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F3_B3,datos/originales/sonido/SON_F3_B3.wav,sonido,base,F3 (El laboratorio abre por la tarde.),"Eddy (español de México, sintetizador de macOS), 205 palabras/min, silencio 400 y 500 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F3_Q,datos/originales/sonido/SON_F3_Q.wav,sonido,consulta,F3 (El laboratorio abre por la tarde.),"Eddy (español de México, sintetizador de macOS), 140 palabras/min, silencio 400 y 400 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F4_B1,datos/originales/sonido/SON_F4_B1.wav,sonido,base,F4 (El laboratorio cierra por la tarde.),"Eddy (español de México, sintetizador de macOS), 175 palabras/min, silencio 350 y 450 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F4_B2,datos/originales/sonido/SON_F4_B2.wav,sonido,base,F4 (El laboratorio cierra por la tarde.),"Eddy (español de México, sintetizador de macOS), 190 palabras/min, silencio 450 y 350 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F4_B3,datos/originales/sonido/SON_F4_B3.wav,sonido,base,F4 (El laboratorio cierra por la tarde.),"Eddy (español de México, sintetizador de macOS), 205 palabras/min, silencio 400 y 500 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"
+SON_F4_Q,datos/originales/sonido/SON_F4_Q.wav,sonido,consulta,F4 (El laboratorio cierra por la tarde.),"Eddy (español de México, sintetizador de macOS), 140 palabras/min, silencio 400 y 400 ms, WAV estéreo 44,1 kHz 16 bits, ruido de fondo leve agregado, ganancia distinta en cada archivo"

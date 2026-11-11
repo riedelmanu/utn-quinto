@@ -1,0 +1,1 @@
+Python inicial está destinado a personas que nunca programaron.

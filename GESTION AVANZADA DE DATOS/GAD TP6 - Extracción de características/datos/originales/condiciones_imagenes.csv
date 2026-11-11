@@ -1,0 +1,25 @@
+id,fondo,iluminacion,angulo,objeto_coil,descripcion
+IMG_O1_B1,madera,normal,0 grados,obj47,aro rojo
+IMG_O1_B2,mantel,tenue,40 grados,obj47,aro rojo
+IMG_O1_B3,pared,fuerte,320 grados,obj47,aro rojo
+IMG_O1_Q,escritorio,algo tenue,20 grados,obj47,aro rojo
+IMG_O2_B1,mantel,normal,0 grados,obj94,aro azul
+IMG_O2_B2,pared,tenue,40 grados,obj94,aro azul
+IMG_O2_B3,escritorio,fuerte,320 grados,obj94,aro azul
+IMG_O2_Q,pared,algo tenue,20 grados,obj94,aro azul
+IMG_O3_B1,pared,normal,0 grados,obj63,morrón rojo
+IMG_O3_B2,escritorio,tenue,40 grados,obj63,morrón rojo
+IMG_O3_B3,madera,fuerte,320 grados,obj63,morrón rojo
+IMG_O3_Q,mantel,algo tenue,20 grados,obj63,morrón rojo
+IMG_O4_B1,escritorio,normal,0 grados,obj82,morrón verde
+IMG_O4_B2,madera,tenue,40 grados,obj82,morrón verde
+IMG_O4_B3,mantel,fuerte,320 grados,obj82,morrón verde
+IMG_O4_Q,madera,algo tenue,20 grados,obj82,morrón verde
+IMG_O5_B1,madera,normal,0 grados,obj42,barco azul
+IMG_O5_B2,mantel,tenue,40 grados,obj42,barco azul
+IMG_O5_B3,pared,fuerte,320 grados,obj42,barco azul
+IMG_O5_Q,escritorio,algo tenue,20 grados,obj42,barco azul
+IMG_O6_B1,mantel,normal,0 grados,obj78,barco verde
+IMG_O6_B2,pared,tenue,40 grados,obj78,barco verde
+IMG_O6_B3,escritorio,fuerte,320 grados,obj78,barco verde
+IMG_O6_Q,pared,algo tenue,20 grados,obj78,barco verde

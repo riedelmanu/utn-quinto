@@ -1,0 +1,12 @@
+modalidad,representación,tamaño,bytes (base),detalle,KB
+imagen,píxeles,18 x 150528,10838016,,10584.0
+imagen,histograma,18 x 25,1800,,1.76
+imagen,ResNet layer2,18 x 512,36864,,36.0
+imagen,ResNet layer4,18 x 2048,147456,,144.0
+texto,bolsa de palabras (dispersa),"12 x 62, 82 no nulos",708,"valores 328 B, índices de columna 328 B, punteros de fila 52 B (densa: 2976 B)",0.69
+texto,TF-IDF (dispersa),"12 x 62, 82 no nulos",708,"valores 328 B, índices de columna 328 B, punteros de fila 52 B (densa: 2976 B)",0.69
+texto,BGE-M3 denso,12 x 1024,49152,,48.0
+sonido,MFCC 26,12 x 26,1248,,1.22
+sonido,MFCC 39 (secuencias),2160 cuadros x 39,336960,suma de los cuadros de los 12 archivos,329.06
+sonido,wav2vec2 media,12 x 768,36864,,36.0
+sonido,wav2vec2 media y desvío,12 x 1536,73728,,72.0

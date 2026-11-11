@@ -1,0 +1,4 @@
+modelo,parámetros,MB en float32
+ResNet50,25557032,97.5
+BGE-M3,567754752,2165.8
+wav2vec2-base,94371712,360.0

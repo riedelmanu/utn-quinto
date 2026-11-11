@@ -1,0 +1,1 @@
+El préstamo de libros de la biblioteca dura una semana y puede renovarse.

@@ -1,0 +1,4 @@
+doc_id,fragmento,token_inicio,token_fin,caracter_inicio,caracter_fin
+DOC_LARGO,0,0,512,0,2528
+DOC_LARGO,1,448,960,2191,4727
+DOC_LARGO,2,896,1400,4411,6911
